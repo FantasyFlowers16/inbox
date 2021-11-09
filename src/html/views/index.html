@@ -1,0 +1,6 @@
+<% var data = {
+    title: "Главная"
+}; %>
+<%= _.template(require('./../components/header.html'))(data) %>
+<%= _.template(require('./../components/mobileMenu.html'))() %>
+<%= _.template(require('./../components/footer.html'))() %>

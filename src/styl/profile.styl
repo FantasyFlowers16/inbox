@@ -1,0 +1,62 @@
+.b-profile{
+  display flex
+  margin-bottom 60px
+  &__avatar-container{
+    height: 0
+    overflow hidden
+    padding-bottom 27.275%
+    position relative
+    width 27.275%
+    border-radius 12px
+  }
+  &__avatar{
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+  }
+  &__data{
+    padding-left 37px
+  }
+  &__name{
+    font: 400 30px/30px "MyriadPro", sans-serif
+  }
+  &__status, &__disk{
+      font: 400 26px/26px "MyriadPro", sans-serif
+      color cTextLightGray
+      position relative
+      display flex
+      align-items center
+      margin-top 27px
+  }
+  &__text{
+    margin-left 17px
+  }
+  &__range{
+    margin-top 10px
+    background-color cRaitingLine
+    width 100%
+    height 6px
+    appearance auto
+    position relative
+    outline: none;
+    margin-left: 17px;
+  }
+  &__range-active{
+    background-color cButBg
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  &__img-container{
+    width 32px
+    height 34px
+    position relative
+  }
+  &__img{
+    position absolute
+    background-size contain
+  }
+}
