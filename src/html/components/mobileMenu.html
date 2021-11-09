@@ -1,5 +1,12 @@
 <% 
   var sizeDisk = '55%';
+  var data = {
+    name:"Super Duper Paul",
+    avatar:"../../img/avatar.jpg",
+    statusImg:"../../img/status.png",
+    diskImg:"../../img/size.png",
+    diskText:"Use 329 MB of 1 GB"
+  }
 %>
 <div class="b-menu-mobile j-menu-mobile">
   <div class="b-menu-mobile__wrapper-points">
@@ -87,22 +94,22 @@
     <!-- Profile -->
     <div class="b-profile">
       <div class="b-profile__avatar-container">
-        <img class="b-profile__avatar" src="../../img/avatar.jpg">
+        <img class="b-profile__avatar" src="<%=data.avatar%>">
       </div>
       <div class="b-profile__data">
-        <div class="b-profile__name">Super Duper Paul</div>
+        <div class="b-profile__name"><%=data.name%></div>
         <div class="b-profile__status">
           <div class="b-profile__status-img-container">
-            <img class="b-profile__status-img" src="../../img/status.png">
+            <img class="b-profile__status-img" src="<%=data.statusImg%>">
           </div>
           <div class="b-profile__text">Corporate user</div>
         </div>
         <div class="b-profile__disk">
           <div class="b-profile__img-container">
-            <img class="b-profile__img" src="../../img/size.png">
+            <img class="b-profile__img" src="<%=data.diskImg%>">
           </div>
           <div>
-            <div class="b-profile__text">Use 329 MB of 1 GB</div>
+            <div class="b-profile__text"><%=data.diskText%></div>
             <div class="b-profile__range">
               <div class="b-profile__range-active" style="width:<%=sizeDisk%>"></div>
             </div>

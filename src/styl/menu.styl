@@ -3,15 +3,16 @@
   background white
   width 100%
   height auto
+  z-index: 2
   top 134px
   box-sizing border-box
   padding 0 50px
-  margin-top 0
+  margin-left -100%
   left 0
-  opacity 1
-  transition margin-top .5s ease, opacity .4s ease
+  opacity 0
+  transition margin-left .5s ease, opacity .4s ease
   &._open{
-    margin-top 0
+    margin-left 0
     opacity 1
   }
   &__compose{
