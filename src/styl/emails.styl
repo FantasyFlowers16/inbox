@@ -1,0 +1,86 @@
+.b-mails{
+  font: 400 22px/26px "MyriadPro", sans-serif
+  margin-top 50px
+  &__data-container{
+    padding-left 26px
+  }
+  &__item-wrapper{
+    display flex
+    align-items center
+  }
+  &__item{
+    margin-bottom 50px
+    &._unread{
+      font-weight 600
+      .mail-data__text{
+        color cText
+      }
+    }
+    &._important{
+      color cTextImportant
+      .mail-data__text{
+        color cTextImportant
+      }
+    }
+  }
+}
+.mail-data{
+  &__top-block{
+    display flex
+  }
+  &__center-block{
+    margin-top 6px
+    padding-left 58px
+    display: flex;
+    align-items: center;
+  }
+  &__bottom-block{
+    padding-left 58px
+    margin-top 6px
+  }
+  &__name{
+    margin-right 15px
+    flex-grow 1
+    width: 30%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__email{
+    color cTextLightGray
+    overflow: hidden
+    flex-grow 1
+    width: 43%;
+    height 25px
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right 36px
+  }
+  &__time {
+    flex-grow 44
+  }
+  &__thema{
+    display inline-block
+    max-width 80%
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden
+    margin-right 11px
+  }
+  &__file{
+    display inline-block
+    background-image: url('../img/file.png');
+    width 16px
+    height 18px
+    background-size cover
+  }
+  &__text{
+    font-weight 400
+    display inline-block
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow hidden
+    color cTextLightGray
+    max-width 100%
+  }
+}

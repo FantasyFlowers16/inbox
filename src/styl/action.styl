@@ -1,0 +1,46 @@
+.b-action{
+  margin-bottom -100%
+  position fixed
+  bottom 0
+  width 100%
+  padding 50px 50px 0 50px
+  box-sizing border-box
+  background cWhiteFon
+  min-height 200px
+  transition margin-bottom .3s ease
+  &._open{
+    margin-bottom 0
+  }
+  &__point-list{
+    border-top 1px solid cLightBorder
+    padding 52px 50px 50px 50px
+  }
+  &__point-list-item{
+    width 100%
+    font: 400 22px/32px "MyriadPro", sans-serif
+    padding-bottom 57px
+    &:last-child{
+      padding-bottom 0
+    }
+  }
+  &__point-img{
+    display flex
+    padding-top 30px
+    border-top 1px solid cLightBorder
+  }
+  &__point-img-wrapper{
+    width 33.333%
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+  }
+  &__point-img-name{
+    margin-top 10px
+    font: 400 20px/28px "MyriadPro", sans-serif
+  }
+  &__point-img-pic{
+    width 50px
+    height 45px
+  }
+}

@@ -1,0 +1,99 @@
+<% 
+
+  var emails = [
+    {
+      name:'Morkovskiy',
+      email:'er.morkovsky@mail.ru',
+      time:'20:32',
+      thema:'Just bought!!!',
+      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaB',
+      new:true,
+      important: true,
+      id:1
+    },
+    {
+      name:'Morkovskiy',
+      email:'er.morkovsky@mail.ru',
+      time:'20:32',
+      thema:'Just bought!!!',
+      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaB',
+      new:true,
+      important: false,
+      id:2
+    },
+    {
+      name:'Morkovskiy',
+      email:'er.morkovsky@mail.ru',
+      time:'20:32',
+      thema:'Just bought!!!',
+      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaB',
+      new:false,
+      important: true,
+      id:3
+    },
+    {
+      name:'Morkovskiy',
+      email:'er.morkovsky@mail.ru',
+      time:'20:32',
+      thema:'Just bought!!!',
+      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaB',
+      new:false,
+      file: true,
+      important: false,
+      id:4
+    },
+    {
+      name:'Morkovskiy',
+      email:'er.morkovsky@mail.ru',
+      time:'20:32',
+      thema:'Just bought!!!',
+      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaB',
+      new:false,
+      file: true,
+      important: false,
+      id:5
+    },
+    {
+      name:'Morkovskiy',
+      email:'er.morkovsky@mail.ru',
+      time:'20:32',
+      thema:'Just bought!!!',
+      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaB',
+      new:false,
+      file: false,
+      important: false,
+      id:6
+    }
+  ];
+%>
+
+<div class="b-mails ">
+  <%for(var item in emails){%>
+    <div class="b-mails__item <%if(emails[item].new){%>_unread <%}%> <%if(emails[item].important){%>_important <%}%>">
+      <div class="b-mails__item-wrapper">
+        <div class="checkbox-container">
+          <input class="checkbox j-checkbox" type="checkbox"  id="Checkbox<%=emails[item].id%>" />
+          <label for="Checkbox<%=emails[item].id%>"></label>
+        </div>
+        <div class="b-mails__data-container mail-data">
+          <div class="mail-data__top-block">
+            <div class="mail-data__name"><%=emails[item].name%></div>
+            <div class="mail-data__email"><%=emails[item].email%></div>
+            <div class="mail-data__time"><%=emails[item].time%></div>
+          </div>
+        </div>
+    </div>
+      <div class="mail-data__center-block">
+        <div class="mail-data__thema"><%=emails[item].thema%></div>
+        <%if(emails[item].file){%>
+          <div class="mail-data__file"></div>
+        <%}%>
+      </div>
+      <div class="mail-data__bottom-block">
+        <div class="mail-data__text"><%=emails[item].text%></div>
+      </div>
+    </div>
+  <%}%>
+ 
+
+</div>

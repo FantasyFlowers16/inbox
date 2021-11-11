@@ -1,0 +1,43 @@
+<% 
+
+  var pointList = [
+    {
+      name:'Sent',
+    },
+    {
+      name:'Custom folder name',
+    },
+    {
+      name:'Personal',
+    }
+  ];
+  var pointListImg = [
+  {
+    name:'Delete',
+    img:"../img/delete.png"
+  },
+  {
+    name:'Move to',
+    img:"../img/move.png"
+  },
+  {
+    name:'SPAM',
+    img:"../img/spam.png"
+  }
+];
+%>
+<div class="b-action j-action-block">
+    <div class="b-action__point-list">
+      <%for(var item in pointList){%>
+        <div class="b-action__point-list-item"><%=pointList[item].name%></div>
+      <%}%>
+    </div>
+    <div class="b-action__point-img">
+      <%for(var item in pointListImg){%>
+        <div class="b-action__point-img-wrapper">
+          <img class="b-action__point-img-pic" src="<%=pointListImg[item].img%>">
+          <div class="b-action__point-img-name"><%=pointListImg[item].name%></div>
+        </div>
+      <%}%>
+    </div>
+</div>

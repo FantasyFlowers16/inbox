@@ -3,4 +3,19 @@
 }; %>
 <%= _.template(require('./../components/header.html'))(data) %>
 <%= _.template(require('./../components/mobileMenu.html'))() %>
+<div class="b-main">
+    <div class="b-main__container">
+        <div class="b-main__search-container">
+            <div class="b-main__title">INBOX</div>
+            <input class="b-main__search j-search-input">
+            <div class=" button b-main__but-container  j-search-but">
+                <div class="b-main__search-img ">
+                </div>
+            </div>
+        </div>
+        <%= _.template(require('./../components/instruments.html'))() %>
+        <%= _.template(require('./../components/emails.html'))() %>
+    </div>
+</div>
+<%= _.template(require('./../components/action.html'))() %>
 <%= _.template(require('./../components/footer.html'))() %>

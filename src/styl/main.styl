@@ -1,0 +1,55 @@
+.b-main
+  margin-top 134px
+  height 100%
+  width 100%
+  padding 0 50px
+  box-sizing border-box
+  &__container
+    padding-top 40px
+    border-top 1px solid cLightBorder
+  &__title
+    font: 400 40px/45px "MyriadPro", sans-serif
+  &__search-container
+    width 100%
+    min-height 70px
+    position relative
+    display flex
+    align-items center
+  &__search
+    border 0px solid cLightBorder
+    position absolute
+    top 0
+    z-index 1
+    border-radius 8px
+    height 70px
+    width 0
+    right 100
+    box-sizing border-box
+    font: 400 32px/32px "MyriadPro", sans-serif
+    transition width .3s ease, padding-left .3s ease, border .3s ease
+    &._open
+      border 1px solid cLightBorder
+      width calc(100% - 100px)
+      padding-left 10px
+  &__but-container
+    position  absolute
+    top 0
+    width 80px
+    height 70px
+    right 0
+    background-color transparent
+    padding 19px 24px
+    border-radius 8px
+    box-sizing border-box
+    display flex
+    transition background-color .3s ease
+    &._active
+      background-color cButBg
+      .b-main__search-img
+        background: url('../img/search-active.png') no-repeat;
+  &__search-img
+    height 32px
+    width 32px
+    background: url('../img/search.png') no-repeat;
+    background-size cover
+

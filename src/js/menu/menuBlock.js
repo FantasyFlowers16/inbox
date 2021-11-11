@@ -1,7 +1,7 @@
 class menu  {
   constructor() {
-    this.menuBut = document.querySelector('.j-menu-but')
-    this.menu = document.querySelector('.j-menu-mobile')
+    this.menuBut = document.querySelector('.j-view-but')
+    this.menu = document.querySelector('.j-view')
   }
 
 

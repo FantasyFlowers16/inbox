@@ -7,3 +7,150 @@
   font: 400 34px/34px "MyriadPro", sans-serif
   line-height 41px
 }
+.checkbox-container
+  position relative
+  min-width 32px
+  min-height 32px
+  display block
+.checkbox{
+  border-radius 4px
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.checkbox + label{
+  display: inline-flex;
+  align-items: center;
+  box-sizing border-box
+  user-select: none;
+  &:before{
+    opacity: 1
+    position absolute
+    content: '';
+    width 30px
+    position: absolute;
+    height 30px
+    transition opacity .2s ease
+    border 1px solid cLightBorder
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+  }
+  &:after{
+    opacity: 0
+    position absolute
+    content: '';
+    box-sizing: border-box;
+    width 30px
+    height 30px
+    transition opacity .2s ease
+    border 1px solid cButBg
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color cButBg
+    padding 4px 
+    background-image: url('../img/svg/ok.svg');
+    background-size 70% 70%
+    top: 0;
+  }
+}
+
+.checkbox:checked+label{
+  &:after{
+    opacity: 1
+  }
+   &:before{
+    opacity: 0
+  }
+
+}
+
+.custom-select{
+  &__content{
+    position relative
+  }
+  &__list{
+    border-radius: 11px;
+    background cFonGray
+    min-width: 150px;
+    position absolute
+    right 0
+    display: flex;
+    z-index 10
+    flex-direction: column;
+    max-width 353px
+    box-sizing border-box
+    max-height 0
+    transition max-height .3s ease-in
+    overflow hidden
+    &.opened{
+      max-height 200px
+    }
+  }
+  &__title{
+    border none
+    position relative
+    padding-right 40px
+    font: 400 21px/32px "MyriadPro", sans-serif
+    &._open{
+      &:before{
+        opacity: 0
+      }
+      &:after{
+        opacity: 1
+      }
+    }
+    &:before{
+      content '';
+      position absolute;
+      display block;
+      opacity 1
+      width 20px
+      height 14px
+      background-image: url('../img/arrow.png');
+      background-repeat no-repeat
+      top calc(50% - 10px)
+      right 0
+    }
+    &:after{
+      opacity 0
+      content '';
+      position absolute;
+      display block;
+      width 20px
+      height 14px
+      background-image: url('../img/arrow-active.png');
+      top 15px
+      right 22px
+    }
+
+  }
+
+  &__item,&__title{
+    cursor pointer
+    box-sizing border-box
+    max-width 353px
+    color cTextLightGray
+  }
+  &__item{
+    height 0px
+    text-align: end;
+    min-height 48px
+    align-items center
+    justify-content flex-end
+    display flex
+    padding-right 40px
+    transition background .3s ease ,color  .3s ease
+    &.active{
+      color black
+    }
+    &:hover{
+      color black
+      background cFonOpacity
+    }
+
+  }
+
+ }
