@@ -23,24 +23,35 @@
   }
   &__wrapper-points{
     position relative
-    padding 65px 0
+    padding 65px 0 19px 0
     border-bottom 1px solid cLightBorder
     &:first-child{
       padding-top 50px
+      padding-bottom: 27px;
     }
     &:last-child{
       border none
+      padding: 88px 0 19px 0;
     }
 
   }
   &__points-container{
     margin-bottom 37px
+    &--planning{
+      margin-bottom 0
+    }
   }
   &__points{
-    padding 25px 0
+    padding 18px 0
     display flex
     justify-content space-between
-    font: 400 32px/32px "MyriadPro", sans-serif
+    font: 400 30px/30px "MyriadPro", sans-serif
+    &--special{
+      padding 22px 0
+    }
+    &--bottom{
+      padding 30px 0
+    }
     &:hover{
       &__link{
         color cTextBlue
@@ -74,7 +85,8 @@
       background-repeat: no-repeat
       width 32px
       height 38px
-      margin-right 24px
+      margin-right: 24px;
+      margin-left: 5px;
     }
   }
   &__points-left{
@@ -94,7 +106,7 @@
   &__points-right{
     font: 400 27px/27px "MyriadPro", sans-serif
     color cTextWhite
-    padding 10px 14px
+    padding 6px 14px
     border-radius 4px
     background-color cBlueLight 
     &--empty{

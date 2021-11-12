@@ -4,11 +4,29 @@
   width 100%
   padding 0 50px
   box-sizing border-box
+  &:before
+    transition opacity .3s ease
+    content ""
+    opacity 0
+    z-index zPopup
+  &._popup
+    &:before
+      transition opacity .3s ease
+      content ""
+      position fixed
+      top 0
+      left 0
+      width 100%
+      height 100%
+      background cBlack
+      opacity .15
+      z-index zPopup
   &__container
-    padding-top 40px
+    padding-top 32px
     border-top 1px solid cLightBorder
   &__title
-    font: 400 40px/45px "MyriadPro", sans-serif
+    letter-spacing: 3.6px;
+    font: 400 46px/45px "MyriadPro", sans-serif
   &__search-container
     width 100%
     min-height 70px

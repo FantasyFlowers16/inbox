@@ -14,7 +14,7 @@
       <button class="button b-menu-mobile__compose">Compose</button>
     </div>
     <div class="b-menu-mobile__points-container">
-      <a href="#" class="b-menu-mobile__points">
+      <a href="#" class="b-menu-mobile__points ">
         <div class="b-menu-mobile__points-left">
           <div class="b-menu-mobile__link">Inbox</div>
           <div class="b-menu-mobile__count">23235</div>
@@ -36,22 +36,22 @@
         <div class="b-menu-mobile__points-right">123</div>
       </a>
     </div>
-    <div class="b-menu-mobile__points-container">
-      <a href="#" class="b-menu-mobile__points">
+    <div class="b-menu-mobile__points-container b-menu-mobile__points-container--planning">
+      <a href="#" class="b-menu-mobile__points b-menu-mobile__points--special">
         <div class="b-menu-mobile__points-left">
           <div class="b-menu-mobile__link">Personal Messages</div>
           <div class="b-menu-mobile__count">7</div>
         </div>
         <div class="b-menu-mobile__points-right b-menu-mobile__points-right--empty"></div>
       </a>
-      <a href="#" class="b-menu-mobile__points">
+      <a href="#" class="b-menu-mobile__points b-menu-mobile__points--special">
         <div class="b-menu-mobile__points-left">
           <div class="b-menu-mobile__link">Work only</div>
           <div class="b-menu-mobile__count">7</div>
         </div>
         <div class="b-menu-mobile__points-right b-menu-mobile__points-right--empty"></div>
       </a>
-      <a href="#" class="b-menu-mobile__points">
+      <a href="#" class="b-menu-mobile__points b-menu-mobile__points--special">
         <div class="b-menu-mobile__points-left">
           <div class="b-menu-mobile__but b-menu-mobile__but--add"></div>
           <div class="b-menu-mobile__link">Add folder</div>
@@ -72,17 +72,17 @@
   <div class="b-menu-mobile__wrapper-points">
     <div class="b-menu-mobile__img--key"></div>
     <div class="b-menu-mobile__points-container">
-      <a href="#" class="b-menu-mobile__points">
+      <a href="#" class="b-menu-mobile__points b-menu-mobile__points--special">
         <div class="b-menu-mobile__points-left">
           <div class="b-menu-mobile__link">Registration</div>
         </div>
       </a>
-      <a href="#" class="b-menu-mobile__points">
+      <a href="#" class="b-menu-mobile__points b-menu-mobile__points--special">
         <div class="b-menu-mobile__points-left">
           <div class="b-menu-mobile__link">Messages</div>
         </div>
       </a>
-      <a href="#" class="b-menu-mobile__points">
+      <a href="#" class="b-menu-mobile__points b-menu-mobile__points--special">
         <div class="b-menu-mobile__points-left">
           <div class="b-menu-mobile__link">User Management</div>
         </div>
@@ -108,10 +108,10 @@
           <div class="b-profile__img-container">
             <img class="b-profile__img" src="<%=data.diskImg%>">
           </div>
-          <div>
+          <div class="b-profile__disk-container">
             <div class="b-profile__text"><%=data.diskText%></div>
-            <div class="b-profile__range">
-              <div class="b-profile__range-active" style="width:<%=sizeDisk%>"></div>
+            <div class="range b-profile__range">
+              <div class="range__active" style="width:<%=sizeDisk%>"></div>
             </div>
           </div>
         </div>
@@ -119,13 +119,13 @@
     </div>
     <!-- Profile-end -->
     <div class="b-menu-mobile__points-container">
-      <a href="#" class="b-menu-mobile__points">
+      <a href="#" class="b-menu-mobile__points b-menu-mobile__points--bottom">
         <div class="b-menu-mobile__points-left">
           <div class="b-menu-mobile__but b-menu-mobile__but--settings"></div>
           <div class="b-menu-mobile__link">Settings</div>
         </div>
       </a>  
-      <a href="#" class="b-menu-mobile__points">
+      <a href="#" class="b-menu-mobile__points b-menu-mobile__points--bottom">
         <div class="b-menu-mobile__points-left">
           <div class="b-menu-mobile__but b-menu-mobile__but--logout"></div>
           <div class="b-menu-mobile__link">Logout</div>

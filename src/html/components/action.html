@@ -11,33 +11,32 @@
       name:'Personal',
     }
   ];
-  var pointListImg = [
-  {
-    name:'Delete',
-    img:"../img/delete.png"
-  },
-  {
-    name:'Move to',
-    img:"../img/move.png"
-  },
-  {
-    name:'SPAM',
-    img:"../img/spam.png"
-  }
-];
 %>
 <div class="b-action j-action-block">
-    <div class="b-action__point-list">
+    <div class="b-action__point-list point-list j-move-container">
       <%for(var item in pointList){%>
-        <div class="b-action__point-list-item"><%=pointList[item].name%></div>
+        <div class="point-list__item"><%=pointList[item].name%></div>
       <%}%>
     </div>
-    <div class="b-action__point-img">
-      <%for(var item in pointListImg){%>
-        <div class="b-action__point-img-wrapper">
-          <img class="b-action__point-img-pic" src="<%=pointListImg[item].img%>">
-          <div class="b-action__point-img-name"><%=pointListImg[item].name%></div>
+    <div class="b-action__point-bottom point-bottom">
+        <div class="point-bottom__wrapper">
+          <div class="point-bottom__pic-container point-bottom__pic-container--delete">
+            <img class="point-bottom__pic"  src="../img/delete.png">
+          </div>
+          <div class="point-bottom__name">Delete</div>
         </div>
-      <%}%>
+        <div class="point-bottom__wrapper j-move">
+          <div class="point-bottom__pic-container">
+            <img class="point-bottom__pic point-bottom__pic--move"  src="../img/move.png">
+            <img class="point-bottom__pic point-bottom__pic--move-active"  src="../img/move-notactive.png">
+          </div>
+          <div class="point-bottom__name">Move to</div>
+        </div>
+        <div class="point-bottom__wrapper">
+          <div class="point-bottom__pic-container point-bottom__pic-container--spam">
+            <img class="point-bottom__pic point-bottom__pic--spam"  src="../img/spam.png">
+          </div>
+          <div class="point-bottom__name">SPAM</div>
+        </div>
     </div>
 </div>

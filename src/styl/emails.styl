@@ -1,15 +1,21 @@
 .b-mails{
-  font: 400 22px/26px "MyriadPro", sans-serif
-  margin-top 50px
+  font: 400 32px/26px "MyriadPro", sans-serif
+  margin-top 47px
   &__data-container{
+    width: 100%;
     padding-left 26px
+    width: calc(100% - 26px);
   }
   &__item-wrapper{
     display flex
     align-items center
+    width: calc(100% - 32px);
   }
   &__item{
-    margin-bottom 50px
+    margin-bottom 56px
+    &:last-child{
+      margin-bottom 59px
+    }
     &._unread{
       font-weight 600
       .mail-data__text{
@@ -18,7 +24,7 @@
     }
     &._important{
       color cTextImportant
-      .mail-data__text{
+      .mail-data__text, .mail-data__email, .mail-data__data{
         color cTextImportant
       }
     }
@@ -29,35 +35,39 @@
     display flex
   }
   &__center-block{
-    margin-top 6px
+    margin-top 10px
     padding-left 58px
     display: flex;
     align-items: center;
   }
   &__bottom-block{
     padding-left 58px
-    margin-top 6px
+    margin-top 16px
+  }
+  &__name-email-container{
+    display flex
+    width calc(100% - 77px)
   }
   &__name{
-    margin-right 15px
-    flex-grow 1
-    width: 30%;
+    margin-right 11px
+    overflow: hidden
+    width 40%
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  &__email{
+  &__email, &__data{
     color cTextLightGray
     overflow: hidden
-    flex-grow 1
-    width: 43%;
+    width: 53%
     height 25px
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-right 36px
+    margin-right 13px
   }
-  &__time {
-    flex-grow 44
+  &__data{
+    width 100%
+    margin-top 11px
   }
   &__thema{
     display inline-block

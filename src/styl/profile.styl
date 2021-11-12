@@ -1,13 +1,14 @@
 .b-profile{
   display flex
-  margin-bottom 60px
+  margin-bottom 42px
   &__avatar-container{
     height: 0
     overflow hidden
-    padding-bottom 27.275%
+    padding-bottom 22%
     position relative
-    width 27.275%
-    border-radius 12px
+    width 23%
+    min-width 23%
+    border-radius 15px
   }
   &__avatar{
     position absolute
@@ -18,6 +19,8 @@
   }
   &__data{
     padding-left 37px
+    width 77%
+    box-sizing border-box
   }
   &__name{
     font: 400 30px/30px "MyriadPro", sans-serif
@@ -28,27 +31,18 @@
       position relative
       display flex
       align-items center
-      margin-top 27px
+      margin-top 18px
   }
   &__text{
-    margin-left 17px
+    margin-left 15px
   }
   &__range{
-    margin-top 10px
-    background-color cRaitingLine
-    width 100%
-    height 6px
-    appearance auto
-    position relative
-    outline: none;
-    margin-left: 17px;
+    margin-left: 15px;
+    width: calc(100% - 15px);
+    margin-top: 6px;
   }
-  &__range-active{
-    background-color cButBg
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+  &__disk-container{
+    width 100%  
   }
   &__img-container{
     width 32px

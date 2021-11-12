@@ -1,0 +1,100 @@
+<% 
+var progress = '55%';
+var items = [
+  {
+    title:"Preparing folder",
+    text:"Downloading digests",
+    progress:"45%",
+    important:false
+  },
+  {
+    title:"Sending message",
+    text:"Downloading digestss",
+    progress:"15%",
+    count:"45 of 184",
+    important:true,
+  },
+  {
+    title:"Preparing folder",
+    text:"Downloading digests",
+    subText:"Encrypting  'Name/qwe/sdfs/sdfsdfsd/dsdf/dsfefs/  2 of 6",
+    progress:"25%",
+    important:false,
+    errorMessage:'You don`t have space available',
+    error:[
+    {
+      name:"user1@domain.com" , 
+      result: true
+    },
+    {
+      name:"other_user@domain.com", 
+      result: false,
+      message:"No space"
+    },
+    {
+      name:"someone@google.com", 
+      result: true
+    },
+  ]
+  },
+];
+%>
+
+<div class="b-task">
+  <div class="b-task__info-container j-tasks-button">
+    <div class="b-task__info-wrapper">
+      <div class="b-task__info-doc-img"></div>
+      <div class="b-task__info-doc">3 tasks in progress (<%=progress%>)</div>
+    </div>
+    <div class="b-task__info-img"></div>
+  </div>
+  <div class="range b-task__range">
+    <div class="range__active" style="width:<%=progress%>"></div>
+  </div>
+  <div class="b-task__items-container j-tasks">
+    <%for(var item in items){%>
+      <div class="b-task__item">
+        <div class="b-task__item-title <%if(items[item].error){%>b-task__item-title--important<%}%>"><%=items[item].title%></div>
+        <div class="b-task__item-text"><%=items[item].text%></div>
+        <%if(items[item].subText){%>
+          <div class="b-task__item-subtext"><%=items[item].subText%></div>
+        <%}%>
+        <div class="range">
+          <div class="range__active" style="width:<%=items[item].progress%>"></div>
+        </div>
+      </div>
+      <%if(items[item].error){%>
+        <div class="b-task__error-container error-task">
+          <div class="error-task__title "><%=items[item].title%></div>
+          <%for(var errorItem in items[item].error){%>
+            <div class="error-task__text">
+              <div class="error-task__text">Recipient <%=items[item].error[errorItem].name%></div>
+              <%if(items[item].error[errorItem].result){%>
+                <div class="error-task__img error-task__img--success"> </div>
+              <%}else{%>
+                <div class="error-task__message-container">
+                  <div class="error-task__img error-task__img--error"></div>
+                  <div class="error-task__message">
+                    <%=items[item].error[errorItem].message%>
+                  </div>
+                </div>
+              <%}%>
+          </div>
+          <%}%>
+          
+          <div class="error-task__resume">
+            <div class="error-task__action-container">
+              <div class="error-task__action-text">Delete</div>
+            </div>
+            <div class="error-task__resume-title-container">
+              <div class="error-task__title"><%=items[item].title%></div>
+              <div class="error-task__img error-task__img--error"></div>
+            </div>
+          </div>
+          <div class="error-task__text"><%=items[item].errorMessage%></div>
+        <%}%>
+      </div>
+    <%}%>
+    <div class="b-task__items-container-title">IN PROGRESS</div>
+  </div>
+</div>

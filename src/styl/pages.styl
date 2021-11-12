@@ -1,0 +1,52 @@
+.pages{
+  display flex
+  width 100%
+  justify-content: space-between;
+  margin-bottom 60px
+  &__left{
+    display flex
+  }
+  &__right{
+    display flex
+  }
+  &__left-once{
+    background: url('../img/page1-active.png');
+    width 18px
+    height 32px
+    transform  scale(-1, 1)
+    margin-left 76px
+    &._disable{
+      opacity .2
+    }
+  }
+  &__left-multy{
+    background: url('../img/page2-active.png');
+    width 38px
+    height 32px
+    transform  scale(-1, 1)
+    &._disable{
+      opacity .2
+    }
+  }
+  &__right-once{
+    background: url('../img/page1-active.png');
+    width 18px
+    height 32px
+    margin-right 76px
+    &._disable{
+      opacity .2
+    }
+  }
+  &__right-multy{
+    background: url('../img/page2-active.png');
+    width 38px
+    height 32px
+    &._disable{
+      opacity .2
+    }
+  }
+  &__count{
+    font: 400 31px/31px "MyriadPro", sans-serif
+    color cTextGray
+  }
+}

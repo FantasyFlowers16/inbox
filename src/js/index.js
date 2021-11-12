@@ -4,11 +4,15 @@ import Select from './main/select.js'
 import Options from './main/opions'
 import actions from './main/actions'
 import Checkbox from './main/checkbox'
+import Tasks from './main/tasks'
 
 
 document.addEventListener('DOMContentLoaded', function () {
   let NewMenu = new Menu()
   NewMenu.init()
+
+  let NewTask = new Tasks()
+  NewTask.init()
 
   let NewAction = new actions()
   NewAction.init()

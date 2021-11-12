@@ -3,32 +3,35 @@
   var emails = [
     {
       name:'Morkovskiy',
-      email:'er.morkovsky@mail.ru',
-      time:'20:32',
-      thema:'Just bought!!!',
-      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaB',
-      new:true,
-      important: true,
-      id:1
-    },
-    {
-      name:'Morkovskiy',
-      email:'er.morkovsky@mail.ru',
+      email:'er.morkovski@mail.ru',
       time:'20:32',
       thema:'Just bought!!!',
       text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaB',
       new:true,
       important: false,
+      timeLeft: "2 hours",
+      id:1
+    },
+    {
+      name:'Alexander Druzfd',
+      email:'sachas@mail.ru',
+      time:'20:32',
+      thema:'Hello my little friend!',
+      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaB',
+      new:true,
+      important: false,
+      timeLeft: "3 days",
       id:2
     },
     {
-      name:'Morkovskiy',
-      email:'er.morkovsky@mail.ru',
+      name:'Avtozapravka',
+      email:'auto.zapravka@mail.ru',
       time:'20:32',
       thema:'Just bought!!!',
       text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaB',
       new:false,
       important: true,
+      timeLeft: "10 month",
       id:3
     },
     {
@@ -40,6 +43,7 @@
       new:false,
       file: true,
       important: false,
+      timeLeft: "3 years",
       id:4
     },
     {
@@ -51,10 +55,11 @@
       new:false,
       file: true,
       important: false,
+      timeLeft: "5 years",
       id:5
     },
     {
-      name:'Morkovskiy',
+      name:'Xrigirii',
       email:'er.morkovsky@mail.ru',
       time:'20:32',
       thema:'Just bought!!!',
@@ -62,6 +67,7 @@
       new:false,
       file: false,
       important: false,
+      timeLeft: "20 years",
       id:6
     }
   ];
@@ -77,8 +83,10 @@
         </div>
         <div class="b-mails__data-container mail-data">
           <div class="mail-data__top-block">
-            <div class="mail-data__name"><%=emails[item].name%></div>
-            <div class="mail-data__email"><%=emails[item].email%></div>
+            <div class="mail-data__name-email-container">
+              <div class="mail-data__name"><%=emails[item].name%></div>
+              <div class="mail-data__email"><%=emails[item].email%></div>
+            </div>
             <div class="mail-data__time"><%=emails[item].time%></div>
           </div>
         </div>
@@ -91,6 +99,7 @@
       </div>
       <div class="mail-data__bottom-block">
         <div class="mail-data__text"><%=emails[item].text%></div>
+        <div class="mail-data__data"><%=emails[item].timeLeft%></div>
       </div>
     </div>
   <%}%>
