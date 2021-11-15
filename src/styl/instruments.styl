@@ -1,14 +1,14 @@
 .b-instr
-  margin-top 25px
-  padding-bottom: 12px
+  margin-top 11px
+  padding-bottom: 5px
   border-bottom 1px solid cLightBorder
   color cTextLightGray
   &__container
     display flex
-    padding-bottom: 27px
+    padding-bottom: 13px
   &__view-hide
     border-top 1px solid cLightBorder
-    padding  0px 50px  3px 50px
+    padding  0px 25px  3px 25px
     transform: scale(1, 0)
     max-height 0
     transition transform .3s ease, max-height .3s ease
@@ -16,21 +16,21 @@
       max-height 300px
       transform: scale(1, 1)
   &__view-select-container
-    font: 400 21px/32px "MyriadPro", sans-serif
+    font: 400 11px/16px "MyriadPro", sans-serif
     display flex
     width 100%
     justify-content space-between
-    margin-top 55px
+    margin-top 27px
     &:last-child
-      margin-bottom 38px
-      margin-top 45px
+      margin-bottom 19px
+      margin-top 22.5px
   &__view-select-title
-    font: 400 32px/35px "MyriadPro", sans-serif
+    font: 400 16px/17px "MyriadPro", sans-serif
   &__option-container
     display flex
     align-items center
     &--view, &--actions
-      margin-left 47px 
+      margin-left 25px 
     &--actions
       display none
       &._visible
@@ -44,9 +44,9 @@
         &:before
           opacity 0
   &__arrow
-    width 20px
-    height 14px
-    margin-left 9px
+    width 10px
+    height 7px
+    margin-left 5px
     position relative
     &:before
       content ''
@@ -73,9 +73,9 @@
       background-repeat no-repeat
       transition opacity .3s ease
     &--main
-      margin-left 55px  
+      margin-left 27px  
   &__title
     transition color .3s ease
-    font: 400 31px/31px "MyriadPro", sans-serif
+    font: 400 15px/15px "MyriadPro", sans-serif
     color cTextLightGray
     cursor pointer

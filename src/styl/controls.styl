@@ -8,8 +8,8 @@
   line-height 41p
 .checkbox
   position relative
-  min-width 32px
-  min-height 32px
+  min-width 16px
+  min-height 16px
   display block
   display: flex
   align-items: center
@@ -29,9 +29,9 @@
       position absolute
       box-sizing: border-box
       content: ''
-      width 30px
+      width 15px
       position: absolute
-      height 30px
+      height 15px
       transition opacity .2s ease
       border 1px solid cLightBorder
       border-radius: 3px
@@ -43,8 +43,8 @@
       position absolute
       content: ''
       box-sizing: border-box
-      width 30px
-      height 30px
+      width 15px
+      height 15px
       transition opacity .2s ease
       border 1px solid cButBg
       border-radius: 3px
@@ -64,14 +64,14 @@
 .select
   &__content
     position relative
-    padding: 4px 10px
+    padding: 2px 5px
     transition background-color .3s ease
     &:hover
       background-color cFonOpacity
       border-radius 5px
   &__list
-    margin: 10px 0;
-    border-radius: 0px 0px 11px 11px
+    margin: 15px 0;
+    border-radius: 0px 0px 6px 6px
     background cFonGray
     width auto
     position absolute
@@ -85,16 +85,16 @@
     transition max-height .2s ease-in
     overflow hidden
     box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.1)
-    font-size: 32px
-    top: 25px
+    font-size: 16px
+    top: 10px
     &.opened
       transition max-height .3s ease-in
       max-height 250px
   &__title
     border none
     position relative
-    padding-right 50px
-    font: 400 32px/32px "MyriadPro", sans-serif
+    padding-right 13px
+    font: 400 16px/16px "MyriadPro", sans-serif
     &._open
       &:before
         opacity: 0
@@ -105,21 +105,23 @@
       position absolute
       display block
       opacity 1
-      width 20px
-      height 14px
+      width 10px
+      height 7px
       background-image: url('../img/arrow.png')
       background-repeat no-repeat
-      top calc(50% - 10px)
+      background-size cover
+      top calc(50% - 4px)
       right 0
     &:after
       opacity 0
       content ''
       position absolute
       display block
-      width 20px
-      height 14px
+      width 10px
+      height 7px
       background-image: url('../img/arrow-active.png')
-      top 15px
+      background-size cover
+      top calc(50% - 4px)
       right 22px
   &__item,&__title
     cursor pointer
@@ -129,12 +131,12 @@
   &__item
     height 0px
     text-align: end
-    min-height 48px    
+    min-height 24px    
     word-break: normal
     align-items center
     justify-content flex-end
     display flex
-    padding 5px 59px 5px 10px
+    padding 7px 18px 7px 5px
     transition background .3s ease ,color  .3s ease
     &:first-child
       margin-top 10px
@@ -147,7 +149,7 @@
  .range
     background-color cRaitingLine
     width 100%
-    height 6px
+    height 3px
     appearance auto
     position relative
     outline: none

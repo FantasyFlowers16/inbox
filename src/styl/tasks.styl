@@ -1,19 +1,19 @@
 .b-task
   background-color cFonTasks
-  margin-bottom: 50px
+  margin-bottom: 29px
   &__info-container
-    padding 18px 24px 0 20px
+    padding 11px 9px 0 10px
     display flex
     justify-content: space-between
-    margin-bottom 14px
+    margin-bottom 5px
     &._open
       .b-task__info-img
         transform rotate(0deg)
   &__info-doc-img
     background-image: url('../img/doc.png')
-    width 36px
-    height 32px
-    margin-right 17px
+    width 18px
+    height 16px
+    margin-right 9px
     background-size cover
   &__range
     width 100%
@@ -26,56 +26,56 @@
       max-height: 600px
       overflow auto
   &__items-container-title
-    font: 400 24px/24px "MyriadPro", sans-serif
+    font: 400 12px/12px "MyriadPro", sans-serif
     color cTextLightGray
     position absolute
     top 19px
     right 37px
   &__item
-    padding 21px 38px 20px 38px
+    padding 11px 19px 10px 19px
     &:first-child
-      margin-top 20px
+      margin-top 10px
   &__item-title
-    font: 400 28px/28px "MyriadPro", sans-serif
-    margin-bottom 12px
+    font: 600 14px/14px "MyriadPro", sans-serif
+    margin-bottom 6px
     &--important
       font-weight 600
   &__item-text
-    font: 400 24px/24px "MyriadPro", sans-serif
-    margin-bottom 13px
+    font: 400 12px/12px "MyriadPro", sans-serif
+    margin-bottom 8px
   &__item-subtext
-    font: 400 22px/25px "MyriadPro", sans-serif
+    font: 400 12px/15px "MyriadPro", sans-serif
     color cTextLightGray
-    margin-bottom 13px
+    margin-bottom 7px
   &__info-wrapper
     display flex
   &__info-img
     transition transform .3s ease
     background-image: url('../img/task.png')
-    width 36px
-    height 32px
+    width: 13px;
+    height: 13px;
     background-size cover
     transform rotate(180deg)
   &__info-doc
-    font: 400 28px/28px "MyriadPro", sans-serif
+    font: 400 14px/14px "MyriadPro", sans-serif
     color cText
   &__error-container
-    font: 400 22px/25px "MyriadPro", sans-serif
+    font: 400 13px/13px "MyriadPro", sans-serif
     background  cFonTasks
-    padding: 50px 38px 42px 38px
+    padding: 25px 19px 21px 19px
     border-top 1px solid cLightBorder
-    margin-top: 20px
+    margin-top: 11px
     position relative
   &__error-title-container
     width 100%
     display flex
   &__error-title
     position relative
-    font: 400 22px/25px "MyriadPro", sans-serif
+    font: 400 11px/12px "MyriadPro", sans-serif
     color cTextLightGray
     position relative
-    margin-bottom 10px
-    margin-left 10px
+    margin-bottom 5px
+    margin-left 5px
 .error-task
   &__text-container ,&__resume
     display flex
@@ -84,22 +84,22 @@
     position absolute
     top 26px
     right 40px
-    font: 400 24px/24px "MyriadPro", sans-serif
+    font: 400 12px/12px "MyriadPro", sans-serif
     color cTextLightGray
     position absolute
   &__text
     display flex
     flex-wrap wrap
-    margin-bottom 5px
+    margin-bottom 4px
   &__message-container
     width 100%
     display flex
   &__title
-    font: 600 28px/28px "MyriadPro", sans-serif
-    margin-bottom 12px
-    display inline
+    font: 600 14px/14px "MyriadPro", sans-serif
+    margin-bottom 6px
+    display inline-block
     &--img
-      margin-right 16px
+      margin-right 8px
   &__resume-title-container
     display flex
     margin-top 20px
@@ -113,23 +113,23 @@
     background cFonAction
   &__message
     position relative
-    font: 400 22px/25px "MyriadPro", sans-serif
+    font: 400 13px/13px "MyriadPro", sans-serif
     color cTextLightGray
     position relative
-    margin-left 10px
+    margin-left 5px
   &__img
-    width 26px
-    height 24px
+    width 13px
+    height 12px
     background-size cover
     display: inline-block
     &--fail
       background-image: url('../img/fail.png')
-      margin-left: 18px
+      margin-left: 9px
     &--error
-      width 26px
-      height 26px
+      width 14px
+      height 14px
       background-image: url('../img/error.png')
     &--success
-      margin-left 18px
+      margin-left 9px
       background-image: url('../img/success.png')
 
