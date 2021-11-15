@@ -1,174 +1,161 @@
-.button{
+.button
   width 100%
   background-color cButBg
   color cButText
   border none
   border-radius 5px
   font: 400 34px/34px "MyriadPro", sans-serif
-  line-height 41px
-}
-.checkbox-container{
+  line-height 41p
+.checkbox
   position relative
   min-width 32px
   min-height 32px
   display block
-  display: flex;
-  align-items: center;
-}
-.checkbox{
-  border-radius 4px
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-.checkbox + label{
-  display: inline-flex;
-  align-items: center;
-  box-sizing border-box
-  user-select: none;
-  &:before{
-    opacity: 1
-    position absolute
-    box-sizing: border-box;
-    content: '';
-    width 30px
-    position: absolute;
-    height 30px
-    transition opacity .2s ease
-    border 1px solid cLightBorder
-    border-radius: 3px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    top: 0;
-  }
-  &:after{
+  display: flex
+  align-items: center
+  &__item
+    border-radius 4px
+    position: absolute
+    z-index: zCustomCheckbox 
     opacity: 0
-    position absolute
-    content: '';
-    box-sizing: border-box;
-    width 30px
-    height 30px
-    transition opacity .2s ease
-    border 1px solid cButBg
-    border-radius: 3px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color cButBg
-    padding 4px 
-    background-image: url('../img/svg/ok.svg');
-    background-size 70% 70%
-    top: 0;
-  }
-}
-
-.checkbox:checked+label{
-  &:after{
+  &__item + label
+    cursor pointer
+    display: inline-flex
+    align-items: center
+    box-sizing border-box
+    user-select: none
+    &:before
+      opacity: 1
+      position absolute
+      box-sizing: border-box
+      content: ''
+      width 30px
+      position: absolute
+      height 30px
+      transition opacity .2s ease
+      border 1px solid cLightBorder
+      border-radius: 3px
+      background-repeat: no-repeat
+      background-position: center center
+      top: 0
+    &:after
+      opacity: 0
+      position absolute
+      content: ''
+      box-sizing: border-box
+      width 30px
+      height 30px
+      transition opacity .2s ease
+      border 1px solid cButBg
+      border-radius: 3px
+      background-repeat: no-repeat
+      background-position: center center
+      background-color cButBg
+      padding 4px 
+      background-image: url('../img/svg/ok.svg')
+      background-size 70% 70%
+      top: 0
+  &__item:checked+label
+   &:after
     opacity: 1
-  }
-   &:before{
+   &:before
     opacity: 0
-  }
 
-}
-
-.custom-select{
-  &__content{
+.select
+  &__content
     position relative
-  }
-  &__list{
-    border-radius: 11px;
+    padding: 4px 10px
+    transition background-color .3s ease
+    &:hover
+      background-color cFonOpacity
+      border-radius 5px
+  &__list
+    margin: 10px 0;
+    border-radius: 0px 0px 11px 11px
     background cFonGray
-    min-width: 150px;
+    width auto
     position absolute
     right 0
-    display: flex;
-    z-index 10
-    flex-direction: column;
-    max-width 353px
+    display: flex
+    z-index zCustomSelect
+    flex-direction: column
+    max-width 400px
     box-sizing border-box
     max-height 0
-    transition max-height .3s ease-in
+    transition max-height .2s ease-in
     overflow hidden
-    &.opened{
-      max-height 200px
-    }
-  }
-  &__title{
+    box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.1)
+    font-size: 32px
+    top: 25px
+    &.opened
+      transition max-height .3s ease-in
+      max-height 250px
+  &__title
     border none
     position relative
     padding-right 50px
     font: 400 32px/32px "MyriadPro", sans-serif
-    &._open{
-      &:before{
+    &._open
+      &:before
         opacity: 0
-      }
-      &:after{
+      &:after
         opacity: 1
-      }
-    }
-    &:before{
-      content '';
-      position absolute;
-      display block;
+    &:before
+      content ''
+      position absolute
+      display block
       opacity 1
       width 20px
       height 14px
-      background-image: url('../img/arrow.png');
+      background-image: url('../img/arrow.png')
       background-repeat no-repeat
       top calc(50% - 10px)
       right 0
-    }
-    &:after{
+    &:after
       opacity 0
-      content '';
-      position absolute;
-      display block;
+      content ''
+      position absolute
+      display block
       width 20px
       height 14px
-      background-image: url('../img/arrow-active.png');
+      background-image: url('../img/arrow-active.png')
       top 15px
       right 22px
-    }
-
-  }
-
-  &__item,&__title{
+  &__item,&__title
     cursor pointer
     box-sizing border-box
     max-width 353px
     color cTextLightGray
-  }
-  &__item{
+  &__item
     height 0px
-    text-align: end;
-    min-height 48px
+    text-align: end
+    min-height 48px    
+    word-break: normal
     align-items center
     justify-content flex-end
     display flex
-    padding-right 40px
+    padding 5px 59px 5px 10px
     transition background .3s ease ,color  .3s ease
-    &.active{
+    &:first-child
+      margin-top 10px
+    &.active
       color black
-    }
-    &:hover{
+    &:hover
       color black
       background cFonOpacity
-    }
-  }
- }
- .range{
+
+ .range
     background-color cRaitingLine
     width 100%
     height 6px
     appearance auto
     position relative
-    outline: none;
+    outline: none
     width: 100%
-    &__active{
+    &__active
       background-color cButBg
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-    }
-  }
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+

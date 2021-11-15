@@ -29,11 +29,7 @@ class actions  {
       }
     }
     this.actionButton.onclick = () => {
-      if(this.actionBlock.classList.contains('_open')){
-        // this.actionBlock.classList.remove('_open')
-        // this.actionButton .classList.remove('_open')
-        // this.container .classList.remove('_popup')
-      }else {
+      if(!this.actionBlock.classList.contains('_open')){
         this.actionBlock.classList.add('_open')
         this.actionButton.classList.add('_open')
         this.container.classList.add('_popup')

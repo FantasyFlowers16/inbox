@@ -6,9 +6,7 @@ class tasks  {
   }
 
   init() {
-    console.log("tasks init")
     this.button.onclick = () => {
-      console.log("tasks onclick")
       if(this.button.classList.contains('_open')){
         this.button.classList.remove('_open')
         this.container.classList.remove('_open')

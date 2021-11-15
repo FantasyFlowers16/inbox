@@ -21,6 +21,7 @@ var items = [
     progress:"25%",
     important:false,
     errorMessage:'You don`t have space available',
+    errorAction:"Delete",
     error:[
     {
       name:"user1@domain.com" , 
@@ -65,7 +66,10 @@ var items = [
       </div>
       <%if(items[item].error){%>
         <div class="b-task__error-container error-task">
+          <div class="error-task__items-container-title">PROBLEM</div>
           <div class="error-task__title "><%=items[item].title%></div>
+          <div class="error-task__img error-task__img--fail"> </div>
+
           <%for(var errorItem in items[item].error){%>
             <div class="error-task__text">
               <div class="error-task__text">Recipient <%=items[item].error[errorItem].name%></div>
@@ -84,17 +88,20 @@ var items = [
           
           <div class="error-task__resume">
             <div class="error-task__action-container">
-              <div class="error-task__action-text">Delete</div>
+              <div class="error-task__action-text"><%=items[item].errorAction%></div>
             </div>
             <div class="error-task__resume-title-container">
-              <div class="error-task__title"><%=items[item].title%></div>
+              <div class="error-task__title error-task__title--img"><%=items[item].title%></div>
               <div class="error-task__img error-task__img--error"></div>
             </div>
           </div>
           <div class="error-task__text"><%=items[item].errorMessage%></div>
+          <div class="error-task__action-container">
+            <div class="error-task__action-text">Delete</div>
+          </div>
+        <%}%>
         <%}%>
       </div>
-    <%}%>
     <div class="b-task__items-container-title">IN PROGRESS</div>
   </div>
 </div>

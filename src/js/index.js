@@ -1,23 +1,24 @@
-import Menu from './menu/menuBlock.js'
+import Menu from './main/menu'
 import SearchBlock from './main/search.js'
-import Select from './main/select.js'
-import Options from './main/opions'
-import actions from './main/actions'
-import Checkbox from './main/checkbox'
+import View from './main/view.js'
+import Actions from './main/actions'
 import Tasks from './main/tasks'
+
+import Select from './main/custom/select.js'
+import Checkbox from './main/custom/checkbox'
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  let NewMenu = new Menu()
+  let NewMenu = new View()
   NewMenu.init()
 
   let NewTask = new Tasks()
   NewTask.init()
 
-  let NewAction = new actions()
+  let NewAction = new Actions()
   NewAction.init()
 
-  let NewOption = new Options()
+  let NewOption = new Menu()
   NewOption.init()
 
   let NewCheckbox = new Checkbox()
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let Search = new SearchBlock()
   Search.init()
 
-  document.querySelectorAll('.j-custom-select')
+  document.querySelectorAll('.j-select')
     .forEach(block => {
       let NewSelect = new Select(block)
       NewSelect.init()

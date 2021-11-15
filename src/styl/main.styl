@@ -25,7 +25,7 @@
     padding-top 32px
     border-top 1px solid cLightBorder
   &__title
-    letter-spacing: 3.6px;
+    letter-spacing: 3.6px
     font: 400 46px/45px "MyriadPro", sans-serif
   &__search-container
     width 100%
@@ -37,7 +37,6 @@
     border 0px solid cLightBorder
     position absolute
     top 0
-    z-index 1
     border-radius 8px
     height 70px
     width 0
@@ -64,10 +63,36 @@
     &._active
       background-color cButBg
       .b-main__search-img
-        background: url('../img/search-active.png') no-repeat;
+        &:before
+          opacity 0
+        &:after
+          opacity 1
   &__search-img
     height 32px
     width 32px
-    background: url('../img/search.png') no-repeat;
-    background-size cover
+    position relative
+    padding 19px 25px 19px 25px
+    box-sizing border-box
+    &:before
+      content:''
+      position absolute
+      top 0
+      width 100%
+      height 100%
+      background: url('../img/search.png') no-repeat    
+      background-size contain
+      opacity 1
+      left 0
+      transition opacity .3s ease
+    &:after
+      content:''
+      position absolute
+      top 0
+      width 100%
+      transition opacity .3s ease
+      height 100%
+      background: url('../img/search-active.png') no-repeat    
+      background-size contain
+      left 0
+      opacity 0
 

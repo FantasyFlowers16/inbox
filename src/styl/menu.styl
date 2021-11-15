@@ -1,141 +1,113 @@
-.b-menu-mobile{
+.b-menu-mobile
   position absolute
   background white
   width 100%
-  height auto
-  z-index: 2
-  top 134px
+  height 100vh
+  z-index: zMenu
+  top 0
+  overflow auto
   box-sizing border-box
   padding 0 50px
   margin-left -100%
   left 0
   opacity 0
   transition margin-left .5s ease, opacity .4s ease
-  &._open{
+  &._open
     margin-left 0
     opacity 1
-  }
-  &__compose{
+  &__compose
     padding 18.5px 0
-  }
-  &__compose-container{
+  &__compose-container
     margin-bottom 65px
-  }
-  &__wrapper-points{
+  &__wrapper-points
     position relative
     padding 65px 0 19px 0
     border-bottom 1px solid cLightBorder
-    &:first-child{
+    &:first-child
       padding-top 50px
-      padding-bottom: 27px;
-    }
-    &:last-child{
+      padding-bottom: 27px
+    &:last-child
       border none
-      padding: 88px 0 19px 0;
-    }
-
-  }
-  &__points-container{
+      padding: 88px 0 19px 0
+  &__points-container
     margin-bottom 37px
-    &--planning{
+    &--planning
       margin-bottom 0
-    }
-  }
-  &__points{
+  &__points
     padding 18px 0
     display flex
     justify-content space-between
     font: 400 30px/30px "MyriadPro", sans-serif
-    &--special{
+    &--special
       padding 22px 0
-    }
-    &--bottom{
+    &--bottom
       padding 30px 0
-    }
-    &:hover{
-      &__link{
+    &:hover
+      &__link
         color cTextBlue
-      }
-    }
-  }
-  &__but{
-    &--add{
-      background: url('../img/svg/add.svg');
+  &__but
+    &--add
+      background: url('../img/svg/add.svg')
       background-repeat: no-repeat
       width 36px
       height 36px
       margin-right 14px
-    }
-    &--contacts{
-      background: url('../img/contacts.png');
+    &--contacts
+      background: url('../img/contacts.png')
       background-repeat: no-repeat
       width 43px
       height 36px
       margin-right 18px
-    }
-    &--settings{
-      background: url('../img/settings.png');
+    &--settings
+      background: url('../img/settings.png')
       background-repeat: no-repeat
       width 46px
       height 46px
       margin-right 14px
-    }
-    &--logout{
-      background: url('../img/logout.png');
+    &--logout
+      background: url('../img/logout.png')
       background-repeat: no-repeat
       width 32px
       height 38px
-      margin-right: 24px;
-      margin-left: 5px;
-    }
-  }
-  &__points-left{
+      margin-right: 24px
+      margin-left: 5px
+  &__points-left
     display flex
     align-items center
-  }
-  &__img{
-    &--key{
-      background: url('../img/key.png');
+  &__img
+    &--key
+      background: url('../img/key.png')
       position absolute
       width 42px
       height 42px
       bottom 50px
       right 0
-    }
-  }
-  &__points-right{
+  &__points-right
     font: 400 27px/27px "MyriadPro", sans-serif
     color cTextWhite
     padding 6px 14px
     border-radius 4px
     background-color cBlueLight 
-    &--empty{
+    &--empty
       display none
-    }
-  }
-  &__count{
+  &__count
     text-align center
     color cLight
     font: 400 27px/27px "MyriadPro", sans-serif
     margin-left 22px
-  }
-  &__link{
+  &__link
     text-align center
     transition color .3s ease
-    &:hover{
+    &:hover
       transition color .2s ease
       color cTextBlue
-    }
-  }
-  &__footer{
+  &__footer
     padding-top 27px
     display: flex
-    flex-wrap: wrap;
-  }
-  &__footer-link{
+    flex-wrap: wrap
+  &__footer-link
     margin-right 18px
     font: 400 30px/52px "MyriadPro", sans-serif
     color cTextLightGray
     text-decoration inherit
-  }
-}
+    

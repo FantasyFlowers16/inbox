@@ -1,52 +1,42 @@
-.pages{
+.pages
   display flex
   width 100%
-  justify-content: space-between;
+  justify-content: space-between
   margin-bottom 60px
-  &__left{
+  &__left
     display flex
-  }
-  &__right{
+  &__right
     display flex
-  }
-  &__left-once{
-    background: url('../img/page1-active.png');
+  &__left-multy,&__left-once,&__right-once,&__right-multy
+    transition opacity .3s ease
+    cursor pointer
+    opacity .8
+    &:hover
+      transition opacity .2s ease
+      opacity 1
+    &._disable
+      pointer-events none
+      opacity .2
+  &__left-once
+    background: url('../img/page1-active.png')
     width 18px
     height 32px
     transform  scale(-1, 1)
     margin-left 76px
-    &._disable{
-      opacity .2
-    }
-  }
-  &__left-multy{
-    background: url('../img/page2-active.png');
+  &__left-multy
+    background: url('../img/page2-active.png')
     width 38px
     height 32px
     transform  scale(-1, 1)
-    &._disable{
-      opacity .2
-    }
-  }
-  &__right-once{
-    background: url('../img/page1-active.png');
+  &__right-once
+    background: url('../img/page1-active.png')
     width 18px
     height 32px
     margin-right 76px
-    &._disable{
-      opacity .2
-    }
-  }
-  &__right-multy{
-    background: url('../img/page2-active.png');
+  &__right-multy
+    background: url('../img/page2-active.png')
     width 38px
     height 32px
-    &._disable{
-      opacity .2
-    }
-  }
-  &__count{
+  &__count
     font: 400 31px/31px "MyriadPro", sans-serif
     color cTextGray
-  }
-}
