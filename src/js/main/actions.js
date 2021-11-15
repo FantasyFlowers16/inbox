@@ -33,7 +33,6 @@ class actions  {
         this.actionBlock.classList.add('_open')
         this.actionButton.classList.add('_open')
         this.container.classList.add('_popup')
-        document.documentElement.style.overflow = 'hidden'
       }
     }
   }
