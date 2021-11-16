@@ -1,0 +1,19 @@
+.b-mails
+  font: 400 16px/16px "MyriadPro", sans-serif
+  margin-top 23px
+  &__item-wrapper
+    display flex
+    align-items center
+    width: 100%
+  &__item
+    margin-bottom 24px
+    &:last-child
+      margin-bottom 26px
+    &._unread
+      font-weight 600
+      .mail-info-bottom__text
+        color cText
+    &._important
+      color cTextImportant
+      .mail-info-bottom__text, .mail-info-top__email, .mail-info-bottom__date
+        color cTextImportant

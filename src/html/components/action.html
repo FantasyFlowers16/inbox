@@ -13,30 +13,30 @@
   ];
 %>
 <div class="b-action j-action-block">
-    <div class="b-action__point-list point-list j-move-container">
+    <div class="b-action__block-top action-block-top j-move-container">
       <%for(var item in pointList){%>
-        <div class="point-list__item"><%=pointList[item].name%></div>
+        <div class="action-block-top__item action-block-top-item"><%=pointList[item].name%></div>
       <%}%>
     </div>
-    <div class="b-action__point-bottom point-bottom">
-        <div class="point-bottom__wrapper">
-          <div class="point-bottom__pic-container point-bottom__pic-container--delete">
-            <img class="point-bottom__pic"  src="../img/delete.png">
+    <div class="b-action__block-bottom action-block-bottom">
+        <div class="action-block-bottom__wrapper">
+          <div class="action-block-bottom__pic-container action-block-bottom__pic-container--delete">
+            <img class="action-block-bottom__pic"  src="../img/delete.png">
           </div>
-          <div class="point-bottom__name">Delete</div>
+          <div class="action-block-bottom__name">Delete</div>
         </div>
-        <div class="point-bottom__wrapper j-move">
-          <div class="point-bottom__pic-container">
-            <img class="point-bottom__pic point-bottom__pic--move"  src="../img/move.png">
-            <img class="point-bottom__pic point-bottom__pic--move-active"  src="../img/move-notactive.png">
+        <div class="action-block-bottom__wrapper j-move">
+          <div class="action-block-bottom__pic-container">
+            <img class="action-block-bottom__pic action-block-bottom__pic--move"  src="../img/move.png">
+            <img class="action-block-bottom__pic action-block-bottom__pic--move-active"  src="../img/move-notactive.png">
           </div>
-          <div class="point-bottom__name">Move to</div>
+          <div class="action-block-bottom__name">Move to</div>
         </div>
-        <div class="point-bottom__wrapper">
-          <div class="point-bottom__pic-container point-bottom__pic-container--spam">
-            <img class="point-bottom__pic point-bottom__pic--spam"  src="../img/spam.png">
+        <div class="action-block-bottom__wrapper">
+          <div class="action-block-bottom__pic-container action-block-bottom__pic-container--spam">
+            <img class="action-block-bottom__pic action-block-bottom__pic--spam"  src="../img/spam.png">
           </div>
-          <div class="point-bottom__name">SPAM</div>
+          <div class="action-block-bottom__name">SPAM</div>
         </div>
     </div>
 </div>

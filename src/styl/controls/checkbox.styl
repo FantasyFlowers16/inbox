@@ -1,0 +1,54 @@
+.checkbox
+  position relative
+  min-width 16px
+  min-height 16px
+  display block
+  display: flex
+  align-items: center
+  &__item
+    border-radius 4px
+    position: absolute
+    z-index: zCustomCheckbox 
+    opacity: 0
+  &__item + label
+    cursor pointer
+    display: inline-flex
+    align-items: center
+    box-sizing border-box
+    user-select: none
+    &:before
+      opacity: 1
+      position absolute
+      box-sizing: border-box
+      content: ''
+      width 15px
+      position: absolute
+      height 15px
+      transition opacity .2s ease
+      border 1px solid cLightBorder
+      border-radius: 3px
+      background-repeat: no-repeat
+      background-position: center center
+      top: 0
+    &:after
+      opacity: 0
+      position absolute
+      content: ''
+      box-sizing: border-box
+      width 15px
+      height 15px
+      transition opacity .2s ease
+      border 1px solid cButBg
+      border-radius: 3px
+      background-repeat: no-repeat
+      background-position: center center
+      background-color cButBg
+      padding 4px 
+      background-image: url('../img/svg/ok.svg')
+      background-size 70% 70%
+      top: 0
+  &__item:checked+label
+   &:after
+    opacity: 1
+   &:before
+    opacity: 0

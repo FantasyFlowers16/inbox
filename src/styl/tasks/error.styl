@@ -1,0 +1,56 @@
+.error-task
+  &__text-container ,&__resume
+    display flex
+    flex-wrap wrap
+  &__items-container-title
+    position absolute
+    top 26px
+    right 40px
+    font: 400 12px/12px "MyriadPro", sans-serif
+    color cTextLightGray
+    position absolute
+  &__text
+    display flex
+    flex-wrap wrap
+    margin-bottom 4px
+  &__message-container
+    width 100%
+    display flex
+  &__title
+    font: 600 14px/14px "MyriadPro", sans-serif
+    margin-bottom 6px
+    display inline-block
+    &--img
+      margin-right 8px
+  &__resume-title-container
+    display flex
+    margin-top 20px
+  &__action-container
+    width 100%
+  &__action-text
+    display inline
+    padding 2px 4px
+    border-radius 4px
+    color cTextWhite
+    background cFonAction
+  &__message
+    position relative
+    font: 400 13px/13px "MyriadPro", sans-serif
+    color cTextLightGray
+    position relative
+    margin-left 5px
+  &__img
+    width 13px
+    height 12px
+    background-size cover
+    display: inline-block
+    &--fail
+      background-image: url('../img/fail.png')
+      margin-left: 9px
+    &--error
+      width 14px
+      height 14px
+      background-image: url('../img/error.png')
+    &--success
+      margin-left 9px
+      background-image: url('../img/success.png')

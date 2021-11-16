@@ -75,31 +75,31 @@
 
 <div class="b-mails ">
   <%for(var item in emails){%>
-    <div class="b-mails__item <%if(emails[item].new){%>_unread <%}%> <%if(emails[item].important){%>_important <%}%>">
-      <div class="b-mails__item-wrapper">
-        <div class="checkbox">
+    <div class="b-mails__item b-mails-item <%if(emails[item].new){%>_unread <%}%> <%if(emails[item].important){%>_important <%}%>">
+      <div class="b-mails-item__wrapper">
+        <div class="checkbox b-mails-item__checkbox">
           <input class="checkbox__item j-checkbox" type="checkbox"  id="Checkbox<%=emails[item].id%>" />
           <label for="Checkbox<%=emails[item].id%>"></label>
         </div>
-        <div class="b-mails__data-container mail-data">
-          <div class="mail-data__top-block">
-            <div class="mail-data__name-email-container">
-              <div class="mail-data__name"><%=emails[item].name%></div>
-              <div class="mail-data__email"><%=emails[item].email%></div>
+        <div class="b-mails-item__data-container mail-info">
+          <div class="mail-info__top-block mail-info-top">
+            <div class="mail-info-top__name-email-container">
+              <div class="mail-info-top__name"><%=emails[item].name%></div>
+              <div class="mail-info-top__email"><%=emails[item].email%></div>
             </div>
-            <div class="mail-data__time"><%=emails[item].time%></div>
+            <div class="mail-info__time"><%=emails[item].time%></div>
           </div>
         </div>
-    </div>
-      <div class="mail-data__center-block">
-        <div class="mail-data__thema"><%=emails[item].thema%></div>
+      </div>
+      <div class="mail-info__center-block mail-info-center">
+        <div class="mail-info-center__thema"><%=emails[item].thema%></div>
         <%if(emails[item].file){%>
-          <div class="mail-data__file"></div>
+          <div class="mail-info-center__file"></div>
         <%}%>
       </div>
-      <div class="mail-data__bottom-block">
-        <div class="mail-data__text"><%=emails[item].text%></div>
-        <div class="mail-data__data"><%=emails[item].timeLeft%> left</div>
+      <div class="mail-info__bottom-block mail-info-bottom">
+        <div class="mail-info-bottom__text"><%=emails[item].text%></div>
+        <div class="mail-info-bottom__date"><%=emails[item].timeLeft%> left</div>
       </div>
     </div>
   <%}%>

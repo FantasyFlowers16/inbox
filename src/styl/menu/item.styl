@@ -1,0 +1,56 @@
+.b-menu-mobile-item
+  &__left
+    display flex
+    align-items center
+  &__right
+    font: 400 14px/14px "MyriadPro", sans-serif
+    word-break: keep-all
+    display: flex
+    align-items: center
+    color cTextWhite
+    padding 3px 7px
+    border-radius 4px
+    background-color cBlueLight 
+    &--empty
+      display none
+  &__link
+    transition color .3s ease
+    &:hover
+      transition color .2s ease
+      color cTextBlue
+  &__count
+    word-break: keep-all
+    text-align center
+    color cLight
+    font: 400 14px/14px "MyriadPro", sans-serif
+    margin 0 11px
+  &__but
+    &--add
+      background: url('../img/svg/add.svg') no-repeat;
+      width 18px
+      height 18px
+      min-width 18px
+      margin-right 7px
+      background-size cover
+    &--contacts
+      background: url('../img/contacts.png') no-repeat
+      background-size cover
+      width 22px
+      height 18px
+      min-width 22px
+      background-size cover
+      margin-right 9px
+    &--settings
+      background: url('../img/settings.png') no-repeat
+      background-size cover
+      width 23px
+      height 23px
+      min-width 23px
+      margin-right 7px
+    &--logout
+      background: url('../img/logout.png') no-repeat
+      background-size cover
+      width 16px
+      height 19px
+      margin-right: 12px
+      margin-left: 3px

@@ -42,25 +42,25 @@ var items = [
 %>
 
 <div class="b-task">
-  <div class="b-task__info-container j-tasks-button">
-    <div class="b-task__info-wrapper">
-      <div class="b-task__info-doc-img"></div>
-      <div class="b-task__info-doc">3 tasks in progress (<%=progress%>)</div>
+  <div class="b-task__info-container b-task-info j-tasks-button">
+    <div class="b-task-info__wrapper">
+      <div class="b-task-info__doc-img"></div>
+      <div class="b-task-info__doc">3 tasks in progress (<%=progress%>)</div>
     </div>
-    <div class="b-task__info-img"></div>
+    <div class="b-task-info__img"></div>
   </div>
   <div class="range b-task__range">
     <div class="range__active" style="width:<%=progress%>"></div>
   </div>
-  <div class="b-task__items-container j-tasks">
+  <div class="b-task__items-container b-task-items j-tasks">
     <%for(var item in items){%>
-      <div class="b-task__item">
-        <div class="b-task__item-title <%if(items[item].error){%>b-task__item-title--important<%}%>"><%=items[item].title%></div>
-        <div class="b-task__item-text"><%=items[item].text%></div>
+      <div class="b-task-items__item b-task-item">
+        <div class="b-task-item__title <%if(items[item].error){%>b-task-item__title--important<%}%>"><%=items[item].title%></div>
+        <div class="b-task-item__text"><%=items[item].text%></div>
         <%if(items[item].subText){%>
-          <div class="b-task__item-subtext"><%=items[item].subText%></div>
+          <div class="b-task-item__subtext"><%=items[item].subText%></div>
         <%}%>
-        <div class="range">
+        <div class="range b-task-item__range">
           <div class="range__active" style="width:<%=items[item].progress%>"></div>
         </div>
       </div>

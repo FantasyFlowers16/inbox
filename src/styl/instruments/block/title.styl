@@ -1,0 +1,24 @@
+ 
+.instr-title-block
+  &__option-container
+    display flex
+    align-items center
+    &--view, &--actions
+      margin-left 25px 
+    &--actions
+      display none
+      &._visible
+        display flex
+    &:hover, &._open
+      .b-instr__title
+        color cTextBlue
+      .b-instr__arrow
+        &:after
+          opacity 1
+        &:before
+          opacity 0
+  &__title
+    transition color .3s ease
+    font: 400 15px/15px "MyriadPro", sans-serif
+    color cTextLightGray
+    cursor pointer
