@@ -1,56 +1,78 @@
 .error-task
-  &__text-container ,&__resume
+  &__resume
     display flex
     flex-wrap wrap
-  &__items-container-title
+  &__top-title
     position absolute
-    top 26px
-    right 40px
-    font: 400 12px/12px "MyriadPro", sans-serif
+    top 19px
+    right 19px
+    font: 400 13px/13px "MyriadPro", sans-serif
     color cTextLightGray
+    letter-spacing: 0.5px;
     position absolute
-  &__text
+  &__info-data
     display flex
+    align-items: center;
     flex-wrap wrap
-    margin-bottom 4px
+
+.b-error-title
+  font: 600 16px/16px "MyriadPro", sans-serif
+  margin-bottom 3px
+  display inline-block
+  &--img
+    margin-right 0px
+
+.error-info
   &__message-container
     width 100%
     display flex
-  &__title
-    font: 600 14px/14px "MyriadPro", sans-serif
-    margin-bottom 6px
-    display inline-block
-    &--img
-      margin-right 8px
-  &__resume-title-container
-    display flex
-    margin-top 20px
-  &__action-container
-    width 100%
-  &__action-text
-    display inline
-    padding 2px 4px
-    border-radius 4px
-    color cTextWhite
-    background cFonAction
+    margin-bottom: 2px;
   &__message
     position relative
     font: 400 13px/13px "MyriadPro", sans-serif
     color cTextLightGray
     position relative
-    margin-left 5px
-  &__img
-    width 13px
+    margin-left 3px
+  &__content
+    margin-top 5px
+
+.error-action
+  width 100%
+  margin-top: 9px;
+  &__action-text
+    display inline
+    padding 2px 4px
+    font-size: 12px;
+    border-radius 2px
+    color cTextWhite
+    background cFonAction
+
+.error-img
+  min-width 13px
+  height 12px
+  background-size cover
+  display: inline-block
+  &--fail
+    background-image: url('../img/fail.png')
+    margin-left: 6px
+  &--error
+    min-width 12px
+    width 12px
     height 12px
-    background-size cover
-    display: inline-block
-    &--fail
-      background-image: url('../img/fail.png')
-      margin-left: 9px
-    &--error
-      width 14px
-      height 14px
-      background-image: url('../img/error.png')
-    &--success
-      margin-left 9px
-      background-image: url('../img/success.png')
+    background-image: url('../img/error.png')
+  &--error-big
+    min-width 12px
+    width 16px
+    height 16px
+    margin-left 8px
+    background-image: url('../img/error.png')
+  &--success
+    min-width: 10px;
+    height: 10px;
+    margin-left 13px
+    background-image: url('../img/success.png')
+
+.error-resume
+  margin-top 16px
+  &__title-container
+    display flex

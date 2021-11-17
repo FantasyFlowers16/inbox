@@ -2,7 +2,7 @@
   background-color cFonTasks
   margin-bottom: 29px
   &__info-container
-    padding 11px 9px 0 10px
+    padding 11px 12px 0 10px
     display flex
     justify-content: space-between
     margin-bottom 5px
@@ -18,18 +18,12 @@
       max-height: 600px
       overflow auto
   &__items-container-title
-    font: 400 12px/12px "MyriadPro", sans-serif
+    font: 400 13px/13px "MyriadPro", sans-serif
     color cTextLightGray
     position absolute
     top 19px
-    right 37px
-  &__error-container
-    font: 400 13px/13px "MyriadPro", sans-serif
-    background  cFonTasks
-    padding: 25px 19px 21px 19px
-    border-top 1px solid cLightBorder
-    margin-top: 11px
-    position relative
+    right 20px
+    letter-spacing: 0.5px;
   &__error-title-container
     width 100%
     display flex
@@ -52,7 +46,6 @@
     height: 13px;
     background-size cover
     transform rotate(180deg)
-  
   &__doc-img
     background-image: url('../img/doc.png')
     width 18px
@@ -63,23 +56,35 @@
   &__doc
     font: 400 14px/14px "MyriadPro", sans-serif
     color cText
+  &__range
+    width 100%
+
 .b-task-items
   &__item
-    padding 11px 19px 10px 19px
+    padding 11px 19px 8px 19px
     &:first-child
       margin-top 10px
+  &__error-container
+    font: 400 13px/13px "MyriadPro", sans-serif
+    background  cFonTasks
+    padding: 29px 19px 24px 19px
+    border-top 1px solid cLightBorder
+    margin-top: 11px
+    position relative
+
 .b-task-item
   &__title
-    font: 600 14px/14px "MyriadPro", sans-serif
+    font: 600 15px/15px "MyriadPro", sans-serif
     margin-bottom 6px
     &--important
       font-weight 600
   &__text
-    font: 400 12px/12px "MyriadPro", sans-serif
+    font: 400 13px/13px "MyriadPro", sans-serif
     margin-bottom 8px
   &__subtext
     font: 400 12px/15px "MyriadPro", sans-serif
     color cTextLightGray
     margin-bottom 7px
+    margin-top -1px
   &__range
     width 100%

@@ -17,7 +17,7 @@ var items = [
   {
     title:"Preparing folder",
     text:"Downloading digests",
-    subText:"Encrypting  'Name/qwe/sdfs/sdfsdfsd/dsdf/dsfefs/  2 of 6",
+    subText:"Encrypting  'Name/qwe/sdfs/sdfsdfsd/dsdf/d <br>  2 of 6",
     progress:"25%",
     important:false,
     errorMessage:'You don`t have space available',
@@ -34,7 +34,8 @@ var items = [
     },
     {
       name:"someone@google.com", 
-      result: true
+      result: true,
+      error:"Delete"
     },
   ]
   },
@@ -49,7 +50,7 @@ var items = [
     </div>
     <div class="b-task-info__img"></div>
   </div>
-  <div class="range b-task__range">
+  <div class="range b-task-info__range">
     <div class="range__active" style="width:<%=progress%>"></div>
   </div>
   <div class="b-task__items-container b-task-items j-tasks">
@@ -64,42 +65,49 @@ var items = [
           <div class="range__active" style="width:<%=items[item].progress%>"></div>
         </div>
       </div>
-      <%if(items[item].error){%>
-        <div class="b-task__error-container error-task">
-          <div class="error-task__items-container-title">PROBLEM</div>
-          <div class="error-task__title "><%=items[item].title%></div>
-          <div class="error-task__img error-task__img--fail"> </div>
 
+
+
+      <%if(items[item].error){%>
+        <div class="b-task-items__error-container error-task">
+          <div class="error-task__top-title">PROBLEM</div>
+          <div class="b-error-title b-error-title--img error-task__title"><%=items[item].title%><div class="error-img error-img--fail"> </div></div>
+          
           <%for(var errorItem in items[item].error){%>
-            <div class="error-task__text">
-              <div class="error-task__text">Recipient <%=items[item].error[errorItem].name%></div>
+            <div class="error-task__info-data error-info">
+              <div class="b-error-content error-info__content error-info__content--special">Recipient <%=items[item].error[errorItem].name%>
               <%if(items[item].error[errorItem].result){%>
-                <div class="error-task__img error-task__img--success"> </div>
+                <div class="error-img error-img--success error-info__img"> </div>
+              </div>
               <%}else{%>
-                <div class="error-task__message-container">
-                  <div class="error-task__img error-task__img--error"></div>
-                  <div class="error-task__message">
+              </div>
+                <div class="error-info__message-container">
+                  <div class="error-img error-img--error error-info__img"></div>
+                  <div class="error-info__message">
                     <%=items[item].error[errorItem].message%>
                   </div>
                 </div>
+                <%}%>
+              <%if(items[item].error[errorItem].error){%>
+                <div class="error-action error-info__action">
+                  <div class="error-action__action-text">Delete</div>
+                </div>
               <%}%>
-          </div>
+            </div>
           <%}%>
           
-          <div class="error-task__resume">
-            <div class="error-task__action-container">
-              <div class="error-task__action-text"><%=items[item].errorAction%></div>
-            </div>
-            <div class="error-task__resume-title-container">
-              <div class="error-task__title error-task__title--img"><%=items[item].title%></div>
-              <div class="error-task__img error-task__img--error"></div>
+          <div class="error-task__resume error-resume">
+            <div class="error-resume__title-container">
+              <div class="b-error-title b-error-title--img error-resume__title"><%=items[item].title%>
+                <div class="error-img error-img--error-big"></div>
+              </div>
             </div>
           </div>
-          <div class="error-task__text"><%=items[item].errorMessage%></div>
-          <div class="error-task__action-container">
-            <div class="error-task__action-text">Delete</div>
+          <div class="b-error-content"><%=items[item].errorMessage%></div>
+          <div class="error-action">
+            <div class="error-action__action-text"><%=items[item].errorAction%></div>
           </div>
-        <%}%>
+         <%}%>
         <%}%>
       </div>
     <div class="b-task__items-container-title">IN PROGRESS</div>

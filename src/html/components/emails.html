@@ -81,25 +81,25 @@
           <input class="checkbox__item j-checkbox" type="checkbox"  id="Checkbox<%=emails[item].id%>" />
           <label for="Checkbox<%=emails[item].id%>"></label>
         </div>
-        <div class="b-mails-item__data-container mail-info">
-          <div class="mail-info__top-block mail-info-top">
-            <div class="mail-info-top__name-email-container">
-              <div class="mail-info-top__name"><%=emails[item].name%></div>
-              <div class="mail-info-top__email"><%=emails[item].email%></div>
+        <div class="b-mails-item__data-container b-mail-info">
+          <div class="b-mail-info__top-block b-mail-info-top">
+            <div class="b-mail-info-top__name-email-container">
+              <div class="b-mail-info-top__name"><%=emails[item].name%></div>
+              <div class="b-mail-info-top__email"><%=emails[item].email%></div>
             </div>
-            <div class="mail-info__time"><%=emails[item].time%></div>
+            <div class="b-mail-info__time"><%=emails[item].time%></div>
           </div>
         </div>
       </div>
-      <div class="mail-info__center-block mail-info-center">
-        <div class="mail-info-center__thema"><%=emails[item].thema%></div>
+      <div class="b-mail-info__center-block b-mail-info-center">
+        <div class="b-mail-info-center__thema"><%=emails[item].thema%></div>
         <%if(emails[item].file){%>
-          <div class="mail-info-center__file"></div>
+          <div class="b-mail-info-center__file"></div>
         <%}%>
       </div>
-      <div class="mail-info__bottom-block mail-info-bottom">
-        <div class="mail-info-bottom__text"><%=emails[item].text%></div>
-        <div class="mail-info-bottom__date"><%=emails[item].timeLeft%> left</div>
+      <div class="b-mail-info__bottom-block b-mail-info-bottom">
+        <div class="b-mail-info-bottom__text"><%=emails[item].text%></div>
+        <div class="b-mail-info-bottom__date"><%=emails[item].timeLeft%> left</div>
       </div>
     </div>
   <%}%>
