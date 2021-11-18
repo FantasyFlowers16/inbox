@@ -10,12 +10,23 @@
   top: 0
   z-index zHeader
   background-color cWhite
+  transition box-shadow .9s ease
+  &._open-menu
+    transition box-shadow .4s ease
+    box-shadow: inset 1px -2px 23px rgba(0, 0, 0 , 0.1)
+  &__button
+    display none
+  &__left-block
+    display flex
+    align-items center
   &__logo
     background: url('../img/svg/logo.svg')
     background-repeat: no-repeat
     width 130px
     background-size cover
     height 17px  
+  &__button
+    padding: 9px 15px 8px 16px
   &__menu
     width 26px
     position relative
@@ -50,3 +61,15 @@
         transition opacity .3s ease
       &:after
         opacity 0
+
+@media screen and (min-width: tWidth)
+  .b-header
+    padding 40px
+    height 97px
+    &__logo
+      margin-right 36px
+    &__menu
+      &._open
+        width auto
+      &:before
+        display none

@@ -2,18 +2,19 @@
   position absolute
   background white
   width 100%
-  height 100vh
-  z-index: zMenu
-  top 0
+  height 100%
+  top -20%
   overflow auto
   box-sizing border-box
   padding 0 25px
-  margin-left -100%
-  left 0
+  right 0
   opacity 0
-  transition margin-left .5s ease, opacity .4s ease
+  z-index: -1;
+  transition top .3s ease, opacity .2s ease
   &._open
-    margin-left 0
+    transition top .4s ease, opacity .3s ease
+    z-index: zMenu
+    top 0
     opacity 1
   &__button-container
     margin-bottom 32px
@@ -45,3 +46,23 @@
     padding-top 8px
     display: flex
     flex-wrap: wrap
+
+@media screen and (min-width: tWidth)
+  .b-menu-mobile
+    height 100vh
+    width 352px
+    position: fixed;
+    z-index zMenuTablet
+    left auto
+    box-shadow: -16px -7px 59px 0px rgba(0, 0, 0, 0.08)
+    right -100%
+    padding: 0 40px;
+    opacity 1
+    &._open
+      right 0
+    &__button-container
+      display none
+    &__wrapper-points
+      &:first-child
+        padding-top 53px
+        padding-bottom: 16px
