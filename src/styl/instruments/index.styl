@@ -9,12 +9,12 @@
   &__view-block
     border-top 1px solid cLightBorder
     padding  0px 25px  3px 25px
-    transform: scale(1, 0)
     max-height 0
-    transition transform .3s ease, max-height .3s ease
+    opacity 0
+    transition opacity .3s ease, max-height .5s ease
     &._open
+      opacity 1
       max-height 300px
-      transform: scale(1, 1)
 
 .instr-arrow
   width 10px
