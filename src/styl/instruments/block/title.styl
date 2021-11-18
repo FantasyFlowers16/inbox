@@ -1,5 +1,5 @@
  
-.instr-title-block
+.b-instr-title-block
   &__option-container
     display flex
     align-items center
@@ -10,9 +10,9 @@
       &._visible
         display flex
     &._open
-      .b-instr__title
+      .b-instr-title-block__title
         color cTextBlue
-      .b-instr__arrow
+      .b-instr-title-block__arrow
         &:after
           opacity 1
         &:before
@@ -25,7 +25,7 @@
 
     
 @media screen and (min-width: dWidth) 
-  .instr-title-block
+  .b-instr-title-block
     &__option-container
       &:hover
         .b-instr__title
