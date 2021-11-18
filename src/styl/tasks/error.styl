@@ -14,6 +14,11 @@
     display flex
     align-items: center;
     flex-wrap wrap
+  &__message-container
+    width 100%
+    display flex
+    margin 2px 0
+    
 
 .b-error-title
   font: 600 16px/16px "MyriadPro", sans-serif
@@ -22,17 +27,16 @@
   &--img
     margin-right 0px
 
-.error-info
-  &__message-container
-    width 100%
-    display flex
-    margin-bottom: 2px;
+.error-task-message
   &__message
     position relative
     font: 400 13px/13px "MyriadPro", sans-serif
     color cTextLightGray
     position relative
     margin-left 3px
+  &__content
+    margin-top 5px
+.error-info
   &__content
     margin-top 5px
 
@@ -69,10 +73,10 @@
   &--success
     min-width: 10px;
     height: 10px;
-    margin-left 13px
+    margin-left 10px
     background-image: url('../img/success.png')
 
 .error-resume
-  margin-top 16px
+  margin-top 14px
   &__title-container
     display flex

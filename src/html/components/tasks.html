@@ -50,7 +50,7 @@ var items = [
     </div>
     <div class="b-task-info__img"></div>
   </div>
-  <div class="range b-task-info__range">
+  <div class="range b-task__range">
     <div class="range__active" style="width:<%=progress%>"></div>
   </div>
   <div class="b-task__items-container b-task-items j-tasks">
@@ -81,9 +81,9 @@ var items = [
               </div>
               <%}else{%>
               </div>
-                <div class="error-info__message-container">
-                  <div class="error-img error-img--error error-info__img"></div>
-                  <div class="error-info__message">
+                <div class="error-task__message-container error-task-message">
+                  <div class="error-img error-img--error error-task-message__img"></div>
+                  <div class="error-task-message__message">
                     <%=items[item].error[errorItem].message%>
                   </div>
                 </div>

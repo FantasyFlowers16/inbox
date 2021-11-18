@@ -11,9 +11,6 @@
     transition opacity .3s ease
     cursor pointer
     opacity .8
-    &:hover
-      transition opacity .2s ease
-      opacity 1
     &._disable
       pointer-events none
       opacity .2
@@ -44,3 +41,10 @@
   &__count
     font: 400 15px/15px "MyriadPro", sans-serif
     color cTextGray
+
+@media screen and (min-width: dWidth) 
+  .pages
+    &__left-multy,&__left-once,&__right-once,&__right-multy
+      &:hover
+        transition opacity .2s ease
+        opacity 1

@@ -6,6 +6,15 @@
     transition color .3s ease
     &:last-child
       padding-bottom 0
-    &:hover
+      dWidth
+    &--active
       color cTextBlue
       transition color .2s ease
+
+@media screen and (min-width: dWidth) 
+  .action-block-top
+    &__item
+      &:hover
+        color cTextBlue
+        transition color .2s ease
+

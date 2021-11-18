@@ -9,7 +9,7 @@
       display none
       &._visible
         display flex
-    &:hover, &._open
+    &._open
       .b-instr__title
         color cTextBlue
       .b-instr__arrow
@@ -22,3 +22,16 @@
     font: 400 15px/15px "MyriadPro", sans-serif
     color cTextLightGray
     cursor pointer
+
+    
+@media screen and (min-width: dWidth) 
+  .instr-title-block
+    &__option-container
+      &:hover
+        .b-instr__title
+          color cTextBlue
+        .b-instr__arrow
+          &:after
+            opacity 1
+          &:before
+            opacity 0

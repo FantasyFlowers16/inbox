@@ -1,0 +1,33 @@
+.b-mails-top-block
+  &__data-container
+    display flex
+    padding-left: 12px;
+    width calc(100% - 16px)
+    box-sizing: border-box;
+
+.b-mails-top-data
+  &__container
+    display flex
+  &__name-email
+    display flex
+    width calc(100% - 40px)
+  &__time
+    width 100%
+    min-width 40px
+    text-align: end
+
+.b-mails-top-name-email
+  &__name
+    margin-right 5px
+    overflow: hidden
+    width 40%
+    text-overflow: ellipsis
+    white-space: nowrap
+  &__email
+    color cTextLightGray
+    overflow: hidden
+    width: 55%
+    height 16px
+    text-overflow: ellipsis
+    white-space: nowrap
+    margin-right 6px

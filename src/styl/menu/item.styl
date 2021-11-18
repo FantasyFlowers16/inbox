@@ -15,9 +15,6 @@
       display none
   &__link
     transition color .3s ease
-    &:hover
-      transition color .2s ease
-      color cTextBlue
   &__count
     word-break: keep-all
     text-align center
@@ -54,3 +51,10 @@
       height 19px
       margin-right: 12px
       margin-left: 3px
+
+@media screen and (min-width: dWidth)
+  .b-menu-mobile-item
+    &__link
+      &:hover
+        transition color .2s ease
+        color cTextBlue
