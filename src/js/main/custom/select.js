@@ -20,10 +20,10 @@ class select{
           if(this.title.innerHTML === item.innerHTML){
             item.classList.add('active')
           }
-          item.onclick = (e) => {
+          item.onclick = () => {
             let text= item.innerHTML
             this.title.innerHTML=item.innerHTML
-                   this.title.innerText=text
+            this.title.innerText=text
             this.listOpen.classList.remove('opened')
           }
         })

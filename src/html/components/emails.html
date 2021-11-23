@@ -10,6 +10,7 @@
       new:true,
       important: false,
       timeLeft: "2 hours",
+      photo:"../../img/avatar.jpg",
       id:1
     },
     {
@@ -21,6 +22,7 @@
       new:true,
       important: false,
       timeLeft: "3 days",
+      photo:"../../img/avatar.jpg",
       id:2
     },
     {
@@ -32,6 +34,7 @@
       new:false,
       important: true,
       timeLeft: "10 month",
+      photo:"../../img/avatar.jpg",
       id:3
     },
     {
@@ -44,6 +47,7 @@
       file: true,
       important: false,
       timeLeft: "3 years",
+      photo:"../../img/avatar.jpg",
       id:4
     },
     {
@@ -56,6 +60,7 @@
       file: true,
       important: false,
       timeLeft: "5 years",
+      photo:"../../img/avatar.jpg",
       id:5
     },
     {
@@ -68,6 +73,7 @@
       file: false,
       important: false,
       timeLeft: "20 years",
+      photo:"../../img/avatar.jpg",
       id:6
     }
   ];
@@ -75,33 +81,46 @@
 
 <div class="b-mails ">
   <%for(var item in emails){%>
-    <div class="b-mails__item b-mails-item <%if(emails[item].new){%>_unread <%}%> <%if(emails[item].important){%>_important <%}%>">
-      <div class="b-mails-item__top-block b-mails-top-block">
+
+      <div class="b-mails__item b-mails-item <%if(emails[item].new){%>_unread <%}%> <%if(emails[item].important){%>_important <%}%>">
         <div class="checkbox b-mails-top-block__checkbox b-mails-top-block__checkbox ">
           <input class="checkbox__item j-checkbox" type="checkbox"  id="Checkbox<%=emails[item].id%>" />
           <label for="Checkbox<%=emails[item].id%>"></label>
         </div>
-
-        <div class="b-mails-top-block__data-container b-mails-top-data">
-          <div class="b-mails-top-data__name-email b-mails-top-name-email">
-              <div class="b-mails-top-name-email__name"><%=emails[item].name%></div>
-              <div class="b-mails-top-name-email__email"><%=emails[item].email%></div>
+        <div class="b-mails__fav j-fav 
+        
+        
+        
+        "></div>
+         <img class="b-mails__foto" src="<%=emails[item].photo%>" />
+         <div class="b-mails__fail-container">
+          <%if(emails[item].file){%>
+            <div class="b-mails__fail"></div>
+          <%}%>
+         </div>
+        <div class="b-mails-item__top-block-container">
+        <div class="b-mails-item__top-block b-mails-top-block">
+            <div class="b-mails-top-block__data-container b-mails-top-data">
+            <div class="b-mails-top-data__name-email b-mails-top-name-email">
+                <div class="b-mails-top-name-email__name"><%=emails[item].name%></div>
+                <div class="b-mails-top-name-email__email"><%=emails[item].email%></div>
+            </div>
+            <div class="b-mails-top-data__time"><%=emails[item].time%></div>
           </div>
-          <div class="b-mails-top-data__time"><%=emails[item].time%></div>
-        </div>
 
+        </div>
+        <div class="b-mails-item__center-block b-mails-center-block">
+          <div class="b-mails-center-block__thema"><%=emails[item].thema%></div>
+          <%if(emails[item].file){%>
+            <div class="b-mails-center-block__file"></div>
+          <%}%>
+        </div>
+        <div class="b-mails-item__bottom-block b-mails-bottom-block">
+          <div class="b-mails-bottom-block__text"><%=emails[item].text%></div>
+          <div class="b-mails-bottom-block__date"><%=emails[item].timeLeft%> left</div>
+        </div>
       </div>
-      <div class="b-mails-item__center-block b-mails-center-block">
-        <div class="b-mails-center-block__thema"><%=emails[item].thema%></div>
-        <%if(emails[item].file){%>
-          <div class="b-mails-center-block__file"></div>
-        <%}%>
       </div>
-      <div class="b-mails-item__bottom-block b-mails-bottom-block">
-        <div class="b-mails-bottom-block__text"><%=emails[item].text%></div>
-        <div class="b-mails-bottom-block__date"><%=emails[item].timeLeft%> left</div>
-      </div>
-    </div>
   <%}%>
  
 

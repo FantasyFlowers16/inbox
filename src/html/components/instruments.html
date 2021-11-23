@@ -9,35 +9,88 @@
       <div class="b-instr-title-block__title">Actions</div>
       <div class="instr-arrow b-instr-title-block__arrow"></div>
     </div>
-    <div class="b-instr-title-block__option-container b-instr-title-block__option-container--view j-view-but">
-      <div class="b-instr-title-block__title">View</div>
-      <div class="instr-arrow b-instr-title-block__arrow"></div>
+    <div class="b-instr-title-block__options-actions b-instr-ptions-actions j-action-upper-block _open">
+      <div class="b-instr-options-actions__item b-instr-options-actions-item">
+        <img class="b-instr-options-actions-item__img b-instr-options-actions-item__img--delete" class="" src="../img/delete.png" alt="">
+        <div class="b-instr-options-actions-item__text b-instr-options-actions-item__text--delete">Delete</div>
+      </div>
+      <div class="b-instr-options-actions__item b-instr-options-actions-item">
+        <img class="b-instr-options-actions-item__img b-instr-options-actions-item__img--move" src="../img/move.png" alt="">
+        <img class="b-instr-options-actions-item__img b-instr-options-actions-item__img--move-notactive" src="../img/move-notactive.png" alt="">
+        <div class="b-instr-options-actions-item__text b-instr-options-actions-item__text--move">Move to folder</div>
+        <div class="instr-arrow b-instr-title-block__arrow"></div>
+      </div>
+      <div class="b-instr-options-actions__item b-instr-options-actions-item"> 
+        <img class="b-instr-options-actions-item__img b-instr-options-actions-item__img--spam" src="../img/spam.png" alt="">
+        <div class="b-instr-options-actions-item__text b-instr-options-actions-item__text--spam">Mark as SPAM</div>
+        <div class="b-instr-options-actions-item__subtext">and delete</div>
+        </div>
     </div>
- </div>
-
-  <div class="b-instr__view-block instr-view-block  j-view">
-    <div class="instr-view-block__select-container">
-      <div class="instr-view-block__select-title">On page:</div>
-      <div class="select j-select instr-view-block__select">
-        <div class="select__content j-select-content">
-          <div class="select__title j-select-title">10</div>
+    <div class="b-instr-title-block__option-container b-instr-title-block__option-container--view">
+      <div class="b-instr-title-block__title  j-view-but">View</div>
+      <div class="instr-arrow b-instr-title-block__arrow"></div>
+      <div class="b-instr__view-desktop j-view-desktop b-instr-view-desktop">
+        <div class="instr-view-block__select-container j-select">
+          <div class="instr-view-block__visible-block">
+            <div class="instr-view-block__select-title">On page:</div>
+            <div class="select instr-view-block__select">
+              <div class="select__content j-select-content">
+                <div class="select__title j-select-title">10</div>
+              </div>
+            </div>
+          </div>
           <div class="select__list j-select-list">
             <span class="select__item j-select-item">10</span>
             <span class="select__item j-select-item">20</span>
             <span class="select__item j-select-item">30</span>
           </div>
         </div>
+        <div class="instr-view-block__select-container j-select">
+          <div class="instr-view-block__visible-block">
+            <div class="instr-view-block__select-title">Sort by:</div>
+            <div class="selectinstr-view-block__select">
+              <div class="select__content j-select-content">
+                <div class="select__title j-select-title">send date</div>
+              </div>
+            </div>
+          </div>
+          <div class="select__list j-select-list">
+            <span class="select__item j-select-item">nick name</span>
+            <span class="select__item j-select-item">email</span>
+            <span class="select__item j-select-item">subject</span>
+            <span class="select__item j-select-item">life time</span>
+            <span class="select__item j-select-item">sent date</span>
+
+          </div>
+        </div>
       </div>
     </div>
-    <div class="instr-view-block__select-container">
-      <div class="instr-view-block__select-title">Sort by:</div>
-      <div class="select j-select instr-view-block__select">
-        <div class="select__content j-select-content">
-          <div class="select__title j-select-title">send date</div>
-          <div class="select__list j-select-list">
-            <span class="select__item j-select-item">send date</span>
-            <span class="select__item j-select-item">size</span>
-            <span class="select__item j-select-item">important</span>
+ </div>
+ <div class="b-instr__view-mobile b-instr-view-mobile">
+    <div class="b-instr-view-mobile__view-block b-instr__view-block instr-view-block  j-view">
+      <div class="instr-view-block__select-container">
+        <div class="instr-view-block__select-title">On page:</div>
+        <div class="select j-select instr-view-block__select">
+          <div class="select__content j-select-content">
+            <div class="select__title j-select-title">10</div>
+            <div class="select__list j-select-list">
+              <span class="select__item j-select-item">10</span>
+              <span class="select__item j-select-item">20</span>
+              <span class="select__item j-select-item">30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="instr-view-block__select-container">
+        <div class="instr-view-block__select-title">Sort by:</div>
+        <div class="select j-select instr-view-block__select">
+          <div class="select__content j-select-content">
+            <div class="select__title j-select-title">send date</div>
+            <div class="select__list j-select-list">
+              <span class="select__item j-select-item">send date</span>
+              <span class="select__item j-select-item">size</span>
+              <span class="select__item j-select-item">important</span>
+            </div>
           </div>
         </div>
       </div>

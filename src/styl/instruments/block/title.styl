@@ -3,6 +3,7 @@
   &__option-container
     display flex
     align-items center
+    position relative
     &--view, &--actions
       margin-left 25px 
     &--actions
@@ -17,13 +18,26 @@
           opacity 1
         &:before
           opacity 0
+  &__options-actions
+      display none
   &__title
     transition color .3s ease
     font: 400 15px/15px "MyriadPro", sans-serif
     color cTextLightGray
     cursor pointer
-
-    
+@media screen and (min-width: tWidth) 
+  .b-instr-title-block
+    &__options-actions
+      display none
+      &._open
+        margin-left 30px
+        display flex
+    &__option-container
+      &--view
+        margin-left: 28px
+      &--actions
+        &._visible
+          display none
 @media screen and (min-width: dWidth) 
   .b-instr-title-block
     &__option-container
@@ -35,3 +49,44 @@
             opacity 1
           &:before
             opacity 0
+.b-instr-options-actions
+  &__item
+    margin-right 30px
+    display flex
+    align-items center
+    position relative
+    &:last-child
+      margin-right 0
+.b-instr-options-actions-item
+  &__text
+    font: 400 16px/16px "MyriadPro", sans-serif
+    &--delete
+      color cTextImportant
+    &--spam
+      color cTextYellow
+    &--move
+      margin-right 5px
+  &__subtext
+    position absolute
+    bottom -14px
+    left 24px
+    font: 400 11px/11px "MyriadPro", sans-serif
+  &__img
+    &--delete
+      width 14px
+      height 16px
+      margin-right 6px
+    &--move-notactive
+      width 16px
+      height 15px
+      margin-right 9px
+    &--move
+      display none
+      width 16px
+      height 15px
+      margin-right 11px
+      visibility hidden
+    &--spam
+      width 16px
+      height 15px
+      margin-right 9px

@@ -2,6 +2,7 @@
   &__select-container
     font: 400 11px/16px "MyriadPro", sans-serif
     display flex
+    flex-wrap: wrap;
     width 100%
     justify-content space-between
     margin-top 27px
@@ -10,3 +11,18 @@
       margin-top 22.5px
   &__select-title
     font: 400 16px/17px "MyriadPro", sans-serif
+  &__visible-block
+    width 100%
+    display flex
+    justify-content space-between
+    margin-bottom 10px
+@media screen and (min-width: tWidth) 
+  .instr-view-block
+    &__title-container
+      display flex
+      justify-content space-between
+    &__select-container
+      margin-top 11px
+      margin-bottom 10px
+      &:last-child
+        margin-top 12px

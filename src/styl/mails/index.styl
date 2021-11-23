@@ -1,11 +1,68 @@
 .b-mails
   font: 400 16px/16px "MyriadPro", sans-serif
   margin-top 23px
+  &__email
+    display flex
+  &__foto
+    display none
+    width 40px
+    height 40px
+    object-fit: cover
+    border-radius 3px
+    margin-left 17px
+  &__fail-container
+    min-width: 33px
+    height 100%
+    display flex
+  &__fail
+    display inline-block
+    background url('../img/file.png') no-repeat
+    min-width 13px
+    height 15px
+    display none
+    background-size cover
+    margin-left 20px
+  &__fav
+    display none
+    min-width 21px
+    height 18px
+    margin-left 19px
+    position relative
+    margin-top -3px
+    &._active
+      &:after
+        opacity 1
+        transform scale(1)
+      &:before
+        opacity 0
+        transform scale(0)
+    &:before
+      content ''
+      position absolute
+      width 100%
+      background: url('../img/star.png') no-repeat    
+      height 100%
+      top 0
+      left 0
+      opacity 1
+      transition opacity .3s ease, transform .3s ease
+    &:after
+      content ''
+      position absolute
+      transform scale(0)
+      width 100%
+      background: url('../img/star-active.png') no-repeat    
+      height 100%
+      top 0
+      left 0
+      opacity 0
+      transition opacity .3s ease, transform .3s ease
   &__item-wrapper
     display flex
     align-items center
     width: 100%
   &__item
+    display flex
     margin-bottom 24px
     &:last-child
       margin-bottom 26px
@@ -17,5 +74,14 @@
         color cText
     &._important
       color cTextImportant
-      .b-mails-bottom-block__text, .b-mails-bottom-block__email, .b-mails-bottom-block__date
-        color cTextImportant
+      .b-mails-bottom-block__text,  .b-mails-bottom-block__date, .b-mails-top-name-email__email
+        color cTextImportant!important
+  
+@media screen and (min-width: tWidth)
+  .b-mails
+    margin-top: 37px
+    &__fav,&__foto,  &__fail
+      display block
+    &__item
+      &:last-child
+        margin-bottom 49px

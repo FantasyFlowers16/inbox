@@ -12,6 +12,7 @@ class actions  {
   init() {
     document.addEventListener('click', e => {
       if(e.target === this.container){
+        console.log('addEventListener')
         this.actionBlock.classList.remove('_open')
         this.actionButton .classList.remove('_open')
         this.container .classList.remove('_popup')

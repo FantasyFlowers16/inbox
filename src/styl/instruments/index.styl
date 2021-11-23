@@ -6,16 +6,26 @@
   &__title-block
     display flex
     padding-bottom: 13px
+  &__view-desktop
+    display none
+
+.b-instr-view-mobile
   &__view-block
     border-top 1px solid cLightBorder
-    padding  0px 25px  3px 25px
+    padding  0px 25px 0px 25px
     max-height 0
     opacity 0
-    transition opacity .3s ease, max-height .5s ease
+    transition opacity .4s ease, max-height .2s ease
+    .instr-view-block__select-container
+      opacity 0
+      transition opacity .3s ease
     &._open
       opacity 1
       max-height 300px
-
+      transition max-height .3s ease 
+      .instr-view-block__select-container
+        opacity 1
+        transition opacity .2s ease 
 .instr-arrow
   width 10px
   height 7px
@@ -46,4 +56,34 @@
     background-repeat no-repeat
     transition opacity .3s ease
   &--main
-    margin-left 27px 
+    margin-left 27px
+
+@media screen and (min-width: tWidth)
+  .b-instr
+    margin-top 14px
+    padding-bottom 23px
+    &__view-mobile
+      display none
+    &__view-desktop
+      padding 17px 23px 0px 24px
+      display block
+      box-sizing border-box
+      max-height 0
+      opacity 0
+      width 212px
+      box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+      background cWhiteFon
+      position absolute
+      top: 30px
+      transition max-height .3s ease, opacity .3s ease
+      left: 0px
+      &._open
+        display block
+        max-height 400px
+        opacity 1
+
+@media screen and (min-width: dWidth)
+  .b-instr
+    &__view-desktop
+      left auto
+      right 0

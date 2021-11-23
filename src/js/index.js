@@ -3,6 +3,7 @@ import SearchBlock from './main/search.js'
 import View from './main/view.js'
 import Actions from './main/actions'
 import Tasks from './main/tasks'
+import Email from './main/email'
 
 import Select from './main/custom/select.js'
 import Checkbox from './main/custom/checkbox'
@@ -11,6 +12,9 @@ import Checkbox from './main/custom/checkbox'
 document.addEventListener('DOMContentLoaded', function () {
   let NewMenu = new View()
   NewMenu.init()
+
+  let NewEmail = new Email()
+  NewEmail.init()
 
   let NewTask = new Tasks()
   NewTask.init()

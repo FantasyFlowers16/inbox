@@ -18,7 +18,7 @@ class tasks  {
           left: 0,
           behavior: 'smooth'
         });
-      },300)
+      },500)
       if(this.button.classList.contains('_open')){
         this.button.classList.remove('_open')
         this.container.classList.remove('_open')
