@@ -15,7 +15,10 @@
     width 100%
     min-width 40px
     text-align: end
-
+  &__thema  
+    display none
+  &__life-time
+    display none
 .b-mails-top-name-email
   &__name
     margin-right 5px
@@ -32,3 +35,23 @@
     white-space: nowrap
     margin-right 6px
 
+@media screen and (min-width: dWidth)
+  .b-mails-top-data
+    display grid
+    grid-template-columns: 44.5% 39% 6% auto
+    &__thema  
+      display block 
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
+      width: 91%
+    &__life-time
+      display block
+      text-align right
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
+
+  .b-mails-top-name-email
+    &__name
+      width 36%

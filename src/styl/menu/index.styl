@@ -80,12 +80,20 @@
 
 @media screen and (min-width: dWidth)
   .b-menu-mobile
-    width 262px
+    width calc(262px - var(--scroll-width))
     right auto
     left 0
     height 100%
+    overflow hidden
     opacity 1
+    padding 0
     visibility: visible;
+    &__scroll-container
+      width 262px
+      padding 0 40px
+      overflow auto
+      height 100%
+      box-sizing border-box
     .b-menu-mobile__wrapper-points
       opacity 1
     &__button-container

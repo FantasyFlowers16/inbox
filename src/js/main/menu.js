@@ -3,10 +3,14 @@ class options  {
     this.button = document.querySelector('.j-menu-but')
     this.container = document.querySelector('.j-menu-mobile')
     this.header = document.querySelector('.j-header')
+    this.menuDesktop =  document.querySelector('.j-menu-desktop')
   }
 
 
   init() {
+    let scrollWidth = this.menuDesktop.offsetWidth - this.menuDesktop.clientWidth;
+    console.log(scrollWidth)
+    this.container.style.setProperty('--scroll-width', scrollWidth + 'px')
     this.button.onclick = () => {
       if (this.button.classList.contains('_open')) {
         this.button.classList.remove('_open')
